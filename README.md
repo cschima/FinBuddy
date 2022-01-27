@@ -1,6 +1,6 @@
 # FinBuddy
 
-## What This Repository Includes
+## What is FinBuddy
 ## How to Contribute
 
 ### Notes
