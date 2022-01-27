@@ -1,8 +1,8 @@
 # FinBuddy
 2022 UW iSchool Capstone Project
 
-### What is FinBuddy
-### How to Contribute
+## What is FinBuddy
+## How to Contribute
 
 #### Notes
 This repository is currently empty and awaiting contributions from the FinBuddy team.
