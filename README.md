@@ -3,7 +3,7 @@
 ## What is FinBuddy
 ## How to Contribute
 
-### Notes
+#### Notes
 This repository is currently empty and awaiting contributions from the FinBuddy team.
 
 #### Contact Us
