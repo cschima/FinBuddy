@@ -1,5 +1,5 @@
 # FinBuddy
-## University of Washington iSchool Capstone Project 2022
+## 2022 UW iSchool Capstone Project
 
 ### What is FinBuddy
 ### How to Contribute
