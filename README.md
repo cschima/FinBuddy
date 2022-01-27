@@ -4,10 +4,10 @@
 ## What is FinBuddy
 ## How to Contribute
 
-#### Notes
+### Notes
 This repository is currently empty and awaiting contributions from the FinBuddy team.
 
-#### Contact Us
+### Contact Us
 Camden Schiman, cschima@uw.edu<br>
 Justin Ung, ungjus19@uw.edu<br>
 Quynh Doan, qdoan@uw.edu<br>
