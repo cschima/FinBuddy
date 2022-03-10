@@ -70,4 +70,11 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="add_goal">Add goal</string>
+    <string name="saving_goals">Saving Goals</string>
+    <string name="see_all">See all</string>
+    <string name="joined_fingrow">Joined FinGrow!</string>
+    <string name="just_now">Just now</string>
+    <string name="profile_icon">profile icon</string>
 </resources>
