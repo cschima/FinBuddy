@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_bg_gradient"
+    android:orientation="vertical"
+    android:paddingTop="?attr/actionBarSize"
+    tools:context=".ui.onboarding.OnboardingActivity">
+
+    <RelativeLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/stepHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:text="@null"
+            android:textColor="@color/like_black"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/skip"
+            android:textAllCaps="false"
+            android:textColor="@color/reliable_blue"
+            android:textSize="12sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:backgroundTint="@color/transparent"
+            app:rippleColor="@color/medium_grey" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:progressBackgroundTint="@color/transparent"
+        android:progressTint="@color/reliable_blue" />
+
+    <FrameLayout
+        android:id="@+id/onboardingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="35dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/nextButton"
+        style="@style/MyMaterialButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="70dp"
+        android:enabled="false"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="14dp"
+        android:stateListAnimator="@null"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/onboarding_grey"
+        android:textSize="16sp"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        app:cornerRadius="8dp"
+        app:rippleColor="@color/deep_blue" />
+</LinearLayout>
