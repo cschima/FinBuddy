@@ -23,7 +23,7 @@ class DocumentsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         val documentsViewModel =
-            ViewModelProvider(this).get(DocumentsViewModel::class.java)
+            ViewModelProvider(this)[DocumentsViewModel::class.java]
 
         _binding = FragmentDocumentsBinding.inflate(inflater, container, false)
         val root: View = binding.root

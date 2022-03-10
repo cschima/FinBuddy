@@ -9,6 +9,7 @@ import com.example.fingrow.data.LoginRepository
 import com.example.fingrow.data.Result
 
 import com.example.fingrow.R
+import com.example.fingrow.data.model.LoggedInUserView
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
