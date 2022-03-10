@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.Relation
 import androidx.room.PrimaryKey
 
-//@Entity(tableName = "user_assignments_table")
+@Entity(tableName = "user_assignments_table")
 data class UserAssignments (
     @Embedded val consultant: User,
 

@@ -7,7 +7,6 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
@@ -20,6 +19,8 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
 import com.example.fingrow.R
+import com.example.fingrow.data.User
+import com.example.fingrow.data.UserViewModel
 import com.example.fingrow.data.model.LoggedInUserView
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
@@ -29,6 +30,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private lateinit var signUpViewModel: SignUpViewModel
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var mUserViewModel: UserViewModel
 
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -125,7 +127,12 @@ class SignUpActivity : AppCompatActivity() {
             }
         }
 
+        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
+
         next.setOnClickListener {
+            val user = User(0, name.text.toString(), username.text.toString(), password.text.toString())
+            // add data to database
+            mUserViewModel.addUser(user)
             onboard()
         }
 

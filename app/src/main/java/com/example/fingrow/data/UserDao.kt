@@ -17,12 +17,12 @@ interface UserDao {
     @Query("SELECT * FROM user_table ORDER BY id ASC")
     fun readAllUserData(): LiveData<List<User>>
 
-    @Query("SELECT * FROM user_table WHERE firstName = :firstName AND lastName = :lastName")
-    fun readAllUserAssignmentsData(firstName: String, lastName: String): LiveData<List<UserAssignments>>
+//    @Query("SELECT * FROM user_assignments_table WHERE userName = :userName")
+//    fun readAllUserAssignmentsData(userName: String): LiveData<List<UserAssignments>>
 
     // Transactions makes sure there aren't any multithreading issues
     @Transaction
-    @Query("SELECT * FROM user_table WHERE firstName = :firstName AND lastName = :lastName")
-    fun getUserData(firstName: String, lastName: String): LiveData<List<User>>
+    @Query("SELECT * FROM user_table WHERE userName = :userName")
+    fun getUserData(userName: String): LiveData<List<User>>
 
 }

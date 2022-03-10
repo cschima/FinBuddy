@@ -2,7 +2,10 @@ package com.example.fingrow.data
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.data.model.LoggedInUser
 import java.io.IOException
 
@@ -21,6 +24,7 @@ class LoginDataSource {
                 AppCompatActivity.MODE_PRIVATE
             )
             val editor = prefs.edit()
+            editor.clear().commit()
             editor.putString("user", fakeUser.displayName)
             editor.apply()
 
@@ -31,7 +35,9 @@ class LoginDataSource {
     }
 
     fun signUp(context: Context, name: String, username: String, password: String): Result<LoggedInUser> {
+
         try {
+
             // TODO: handle signUpUser authentication
             val fakeUser = LoggedInUser(username, name)
 
