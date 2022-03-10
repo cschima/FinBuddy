@@ -11,11 +11,6 @@ class StartingRoutingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val splashScreen = installSplashScreen()
         splashScreen.setKeepOnScreenCondition{true}
-//        val prefs = getSharedPreferences("login",
-//            MODE_PRIVATE
-//        )
-//        val editor = prefs.edit()
-//        editor.clear().commit()
 
         if (getSharedPreferences("login", MODE_PRIVATE).getString("user", "") != "") {
             val intent = Intent(this, MainActivity::class.java)

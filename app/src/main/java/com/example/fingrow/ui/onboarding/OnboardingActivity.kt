@@ -1,17 +1,12 @@
 package com.example.fingrow.ui.onboarding
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.R
 import com.example.fingrow.databinding.ActivityOnboardingBinding
-import com.example.fingrow.ui.signup.SignUpViewModel
-import com.example.fingrow.ui.signup.SignUpViewModelFactory
 
 
 class OnboardingActivity : AppCompatActivity() {
@@ -28,7 +23,8 @@ class OnboardingActivity : AppCompatActivity() {
 
         val fragments: ArrayList<Fragment> = arrayListOf(
             FirstOnboardingFragment(),
-//            SecondOnboardingFragment(),
+            // TODO
+            // SecondOnboardingFragment(),
             ThirdOnboardingFragment(),
             FourthOnboardingFragment()
         )
@@ -45,11 +41,14 @@ class OnboardingActivity : AppCompatActivity() {
             )
 
             binding.skipButton.setOnClickListener {
+                // TODO
                 if (pos < fragments.size) {
                     swapFrag(fragments[pos])
                 }
                 else {
+                    // TODO attach info
                     setResult(RESULT_OK)
+                    finish()
                 }
             }
 
@@ -58,6 +57,7 @@ class OnboardingActivity : AppCompatActivity() {
                     swapFrag(fragments[pos])
                 }
                 else {
+                    // TODO attach info
                     setResult(RESULT_OK)
                     finish()
                 }
@@ -79,7 +79,7 @@ class OnboardingActivity : AppCompatActivity() {
     private fun swapFrag(frag: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(binding.onboardingFragment.id, frag)
-            addToBackStack(null);
+            addToBackStack(null)
             commit()
         }
     }

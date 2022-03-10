@@ -45,6 +45,7 @@
     <string name="title_activity_sign_up">SignUpActivity</string>
     <string name="title_activity_onboarding">OnboardingActivity</string>
     <string name="step_heading">Step %1$d of %2$d</string>
+    <string name="main_heading">Welcome %1$s!</string>
     <string name="skip">Skip</string>
     <string name="search">Search</string>
     <string name="notifications">Notifications</string>
@@ -55,4 +56,18 @@
     <string name="speech_bubble_notepad_description">picture of speech bubble and notepad</string>
     <string name="gain_financial_knowledge">Gain financial\nknowledge</string>
     <string name="tips_and_reminders">Tips and reminders from mentors\nwill help you on your journey!</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
 </resources>

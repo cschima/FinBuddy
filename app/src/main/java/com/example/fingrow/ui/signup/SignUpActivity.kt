@@ -3,40 +3,38 @@ package com.example.fingrow.ui.signup
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Patterns
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
 import com.example.fingrow.R
 import com.example.fingrow.data.User
 import com.example.fingrow.data.UserViewModel
-import com.example.fingrow.data.model.LoggedInUserView
+import com.example.fingrow.data.model.LoggedInUser
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var signUpViewModel: SignUpViewModel
-    private lateinit var binding: ActivitySignUpBinding
     private lateinit var mUserViewModel: UserViewModel
+    private lateinit var binding: ActivitySignUpBinding
 
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
-                signUpViewModel.signUp(
-                    this,
+                signUp(
                     binding.name.text.toString(),
                     binding.username.text.toString(),
                     binding.password.text.toString()
@@ -57,43 +55,8 @@ class SignUpActivity : AppCompatActivity() {
         val password = binding.password
         val next = binding.nextButton
 
-        signUpViewModel = ViewModelProvider(
-            this,
-            SignUpViewModelFactory()
-        )[SignUpViewModel::class.java]
-
-        signUpViewModel.signUpFormState.observe(this@SignUpActivity, Observer {
-            val signUpState = it ?: return@Observer
-
-            // disable next button unless name, username, and password is valid
-            next.isEnabled = signUpState.isDataValid
-
-            if (signUpState.nameError != null) {
-                name.error = getString(signUpState.nameError)
-            }
-            if (signUpState.usernameError != null) {
-                username.error = getString(signUpState.usernameError)
-            }
-            if (signUpState.passwordError != null) {
-                password.error = getString(signUpState.passwordError)
-            }
-        })
-
-        signUpViewModel.signUpResult.observe(this, Observer {
-            val signUpResult = it ?: return@Observer
-
-            if (signUpResult.error != null) {
-                showSignUpFailed(signUpResult.error)
-            }
-            if (signUpResult.success != null) {
-                updateUiWithUser(signUpResult.success)
-            }
-
-            setResult(Activity.RESULT_OK)
-        })
-
         name.afterTextChanged {
-            signUpViewModel.signUpDataChanged(
+            signUpDataChanged(
                 name.text.toString(),
                 username.text.toString(),
                 password.text.toString()
@@ -101,7 +64,7 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         username.afterTextChanged {
-            signUpViewModel.signUpDataChanged(
+            signUpDataChanged(
                 name.text.toString(),
                 username.text.toString(),
                 password.text.toString()
@@ -110,7 +73,7 @@ class SignUpActivity : AppCompatActivity() {
 
         password.apply {
             afterTextChanged {
-                signUpViewModel.signUpDataChanged(
+                signUpDataChanged(
                     name.text.toString(),
                     username.text.toString(),
                     password.text.toString()
@@ -120,20 +83,23 @@ class SignUpActivity : AppCompatActivity() {
             setOnEditorActionListener { _, actionId, _ ->
                 when (actionId) {
                     EditorInfo.IME_ACTION_DONE -> {
-                        onboard()
+                        if (isNewUser(username.text.toString())) {
+                            onboard()
+                        } else {
+                            showSignUpFailed("User already exists")
+                        }
                     }
                 }
                 false
             }
         }
 
-        mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
-
         next.setOnClickListener {
-            val user = User(0, name.text.toString(), username.text.toString(), password.text.toString())
-            // add data to database
-            mUserViewModel.addUser(user)
-            onboard()
+            if (isNewUser(username.text.toString())) {
+                onboard()
+            } else {
+                showSignUpFailed("User already exists")
+            }
         }
 
         binding.logInButton.setOnClickListener {
@@ -143,12 +109,77 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
+    private fun signUpDataChanged(name: String, username: String, password: String) {
+        // TODO
+        if (!isNameValid(name)) {
+            binding.username.error = "Not a valid name"
+        }
+        if (!isUserNameValid(username)) {
+            binding.username.error = "Not a valid username"
+        }
+        if (!isPasswordValid(password)) {
+            binding.password.error = "Password must be >5 characters"
+        }
+        binding.nextButton.isEnabled = isUserNameValid(username) &&
+                isPasswordValid(password) && isNameValid(name)
+    }
+
+    private fun isNameValid(name: String): Boolean {
+        // TODO
+        return (name.isNotBlank())
+    }
+
+    private fun isUserNameValid(username: String): Boolean {
+        // TODO
+        return if (username.contains('@')) {
+            Patterns.EMAIL_ADDRESS.matcher(username).matches()
+        } else {
+            username.isNotBlank()
+        }
+    }
+
+    private fun isPasswordValid(password: String): Boolean {
+        // TODO
+        return password.length > 5
+    }
+
+    private fun isNewUser(username: String): Boolean {
+        // TODO: Check if user is available
+        return username.isNotEmpty()
+    }
+
     private fun onboard() {
+        // TODO: Get info from onboarding screens
         val intent = Intent(this, OnboardingActivity::class.java)
         resultLauncher.launch(intent)
     }
 
-    private fun updateUiWithUser(model: LoggedInUserView) {
+    private fun signUp(name: String, username: String, password: String) {
+        try {
+            // TODO: handle sign up authentication
+            mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+
+            val user = User(0, name, username, password)
+            mUserViewModel.addUser(user)
+
+            val fakeUser = LoggedInUser(username, name)
+
+            // Save user in SharedPreferences
+            val prefs: SharedPreferences = getSharedPreferences("login", MODE_PRIVATE)
+            val editor = prefs.edit()
+            editor.putString("user", fakeUser.displayName)
+            editor.apply()
+
+            updateUiWithUser(fakeUser)
+            setResult(Activity.RESULT_OK)
+        } catch (e: Throwable) {
+            showSignUpFailed("Error signing up")
+            setResult(Activity.RESULT_CANCELED)
+        }
+    }
+
+    private fun updateUiWithUser(model: LoggedInUser) {
+        // TODO
         val welcome = getString(R.string.welcome)
         val displayName = model.displayName
 
@@ -165,7 +196,8 @@ class SignUpActivity : AppCompatActivity() {
         ).show()
     }
 
-    private fun showSignUpFailed(@StringRes errorString: Int) {
+    private fun showSignUpFailed(errorString: String) {
+        // TODO
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
 

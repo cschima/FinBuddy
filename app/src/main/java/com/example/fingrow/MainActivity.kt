@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
 
         val navView: BottomNavigationView = binding.navView
 
