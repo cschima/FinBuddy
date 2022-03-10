@@ -1,6 +1,5 @@
 package com.example.fingrow.data
 
-import android.widget.EditText
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -12,18 +11,3 @@ data class User(
     val email: String,
     val password: String
 )
-
-/*
-
-General Tables:
-Users
-Assignments
-
-Per Client:
-Money Flow
-Meetings
-Chat
-Goals
-Files
-
-*/
