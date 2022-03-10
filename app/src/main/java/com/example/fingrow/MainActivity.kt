@@ -3,12 +3,8 @@ package com.example.fingrow
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
-import android.widget.ImageView
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.MenuItemCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -46,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         navView.getOrCreateBadge(R.id.navigation_chat).apply {
-            number = 10
+            number = 1
             isVisible = true
         }
 
