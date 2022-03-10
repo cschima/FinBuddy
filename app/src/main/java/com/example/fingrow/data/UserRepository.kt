@@ -9,4 +9,8 @@ class UserRepository(private val userDao: UserDao) {
     suspend fun addUser(user: User) {
         userDao.addUser(user)
     }
+
+    suspend fun findUser(userName: String, password: String): Int {
+        return userDao.findUser(userName, password)
+    }
 }

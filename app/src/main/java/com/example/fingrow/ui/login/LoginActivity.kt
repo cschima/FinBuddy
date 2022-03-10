@@ -8,6 +8,7 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.util.Patterns
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
@@ -15,14 +16,19 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
 import com.example.fingrow.R
+import com.example.fingrow.data.User
+import com.example.fingrow.data.UserViewModel
 import com.example.fingrow.data.model.LoggedInUser
 import com.example.fingrow.databinding.ActivityLoginBinding
 import com.example.fingrow.ui.signup.SignUpActivity
+import java.io.IOException
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var mUserViewModel: UserViewModel
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,6 +117,12 @@ class LoginActivity : AppCompatActivity() {
 
     private fun login(username: String, password: String) {
         try {
+//            mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+//            val user = mUserViewModel.findUser(username, password)
+//            if (user != 1){
+//                throw IOException()
+//            }
+
             // TODO: handle login authentication
             val fakeUser = LoggedInUser(username, username)
 
@@ -124,6 +136,7 @@ class LoginActivity : AppCompatActivity() {
 
             updateUiWithUser(fakeUser)
             setResult(Activity.RESULT_OK)
+
         } catch (e: Throwable) {
             showLoginFailed("Error logging in")
             setResult(Activity.RESULT_CANCELED)
