@@ -8,8 +8,12 @@ interface UserDao {
 
     // OnConflictStrategy.IGNORE: if there is exactly the same user, then ignore it
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun addUser(user: User)
+    @Insert(onConflict = OnConflictStrategy.ABORT)
+    suspend fun addUser(user: User)
+
+    @Transaction
+    @Query("SELECT COUNT(*) FROM user_table WHERE email = :userName AND password = :password")
+    suspend fun findUser(userName: String, password: String): Int
 
     @Delete
     fun delete(user:User)
