@@ -21,7 +21,18 @@ class ChatFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
-        return binding.root
+
+        binding.darrenCard.setOnClickListener {
+            //Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show()
+        }
+
+        val root: View = binding.root
+
+//        val textView: TextView = binding.textChat
+//        chatViewModel.text.observe(viewLifecycleOwner) {
+//            textView.text = it
+//        }
+        return root
     }
 
     override fun onDestroyView() {
