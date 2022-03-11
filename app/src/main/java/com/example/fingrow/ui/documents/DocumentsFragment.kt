@@ -4,9 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.databinding.FragmentDocumentsBinding
 
 class DocumentsFragment : Fragment() {
@@ -22,17 +20,8 @@ class DocumentsFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val documentsViewModel =
-            ViewModelProvider(this)[DocumentsViewModel::class.java]
-
         _binding = FragmentDocumentsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textDocuments
-        documentsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
     }
 
     override fun onDestroyView() {
