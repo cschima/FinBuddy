@@ -77,4 +77,16 @@
     <string name="joined_fingrow">Joined FinGrow!</string>
     <string name="just_now">Just now</string>
     <string name="profile_icon">profile icon</string>
+
+    <!-- Chat -->
+    <string name="all_chats">All Chats</string>
+    <string name="video_calls">Video Calls</string>
+    <string name="Darren_Smith">Darren Smith</string>
+    <string name="Darren_desc">Happy to be your mentor!...</string>
+    <string name="Shelia_Bates">Shelia Bates</string>
+    <string name="Shelia_desc">To continue our conversation...</string>
+    <string name="time_1_25">1:25 PM</string>
+    <string name="time_2_37">2:37 PM</string>
+    <string name="one">1</string>
+
 </resources>
