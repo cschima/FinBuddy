@@ -17,8 +17,6 @@ class LandingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        supportActionBar?.hide()
-
         binding = ActivityLandingBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

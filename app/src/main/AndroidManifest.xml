@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinGrow">
         <activity
+            android:name=".ui.home.NewGoalActivity"
+            android:exported="false" />
+        <activity
             android:name=".StartingRoutingActivity"
             android:exported="true"
             android:label="@string/title_activity_starting_routing"
@@ -35,7 +38,7 @@
         <activity
             android:name=".ui.onboarding.OnboardingActivity"
             android:exported="false"
-            android:label="@string/title_activity_onboarding"/>
+            android:label="@string/title_activity_onboarding" />
         <activity
             android:name=".MainActivity"
             android:exported="false"

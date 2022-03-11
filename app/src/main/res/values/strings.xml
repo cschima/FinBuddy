@@ -77,4 +77,9 @@
     <string name="joined_fingrow">Joined FinGrow!</string>
     <string name="just_now">Just now</string>
     <string name="profile_icon">profile icon</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="box">box</string>
+    <string name="goal_title">Goal Title</string>
+    <string name="goal_amount">Goal Amount</string>
 </resources>

@@ -44,4 +44,9 @@
         <item name="backgroundTint">@color/color_states_materialbuttonoutline</item>
         <item name="strokeColor">@color/mint</item>
     </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
 </resources>

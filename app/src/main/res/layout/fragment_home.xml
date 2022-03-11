@@ -130,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_profile"
                     android:contentDescription="@string/profile_icon"
-                    android:background="@drawable/card_icon_bg"
+                    android:background="@drawable/circular_icon_bg_mint"
                     card_view:layout_constraintStart_toStartOf="parent"
                     card_view:layout_constraintTop_toTopOf="parent"
                     card_view:layout_constraintBottom_toBottomOf="parent"/>

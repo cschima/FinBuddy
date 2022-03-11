@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.FirstNewGoalStageFragment"
+    android:background="@drawable/new_goal_bg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/first_new_goal_stage_image"
+        android:contentDescription="@string/box"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goal_title"
+        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_medium"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/off_white"
+        android:textSize="14sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:inputType="textAutoComplete"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goal_amount"
+        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_medium"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/off_white"
+        android:textSize="14sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:inputType="number"
+        android:textAlignment="center"/>
+</LinearLayout>
