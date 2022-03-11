@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.fingrow.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <fragment
+        android:id="@+id/navigation_documents"
+        android:name="com.example.fingrow.ui.documents.DocumentsFragment"
+        android:label="@string/title_documents"
+        tools:layout="@layout/fragment_documents" />
+
+    <fragment
+        android:id="@+id/navigation_meetings"
+        android:name="com.example.fingrow.ui.meetings.MeetingsFragment"
+        android:label="@string/title_meetings"
+        tools:layout="@layout/fragment_meetings" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.example.fingrow.ui.chat.ChatFragment"
+        android:label="@string/title_chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.example.fingrow.ui.account.AccountFragment"
+        android:label="@string/title_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>

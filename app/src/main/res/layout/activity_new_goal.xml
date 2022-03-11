@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:orientation="vertical"
+    android:paddingTop="60dp"
+    android:paddingBottom="60dp"
+    android:gravity="center"
+    tools:context=".ui.home.NewGoalActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/checkedStageOne"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_icon_bg_mint"
+                android:contentDescription="@string/profile_icon"
+                android:src="@drawable/ic_check"
+                app:tint="@color/dark_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/checkedStageOne"
+                android:layout_alignTop="@+id/checkedStageOne"
+                android:layout_alignEnd="@+id/checkedStageOne"
+                android:layout_alignBottom="@+id/checkedStageOne"
+                android:background="@drawable/circular_icon_bg_mint"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/_1"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="@color/mint"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/checkedStageTwo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circular_icon_bg_mint"
+                android:contentDescription="@string/profile_icon"
+                android:src="@drawable/ic_check"
+                app:tint="@color/dark_blue"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignStart="@+id/checkedStageTwo"
+                android:layout_alignTop="@+id/checkedStageTwo"
+                android:layout_alignEnd="@+id/checkedStageTwo"
+                android:layout_alignBottom="@+id/checkedStageTwo"
+                android:background="@drawable/circular_icon_bg_mint"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/_2"
+                android:textAlignment="center"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+                android:visibility="visible"
+                android:alpha=".5"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/stageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+
+    <ImageView
+        android:id="@+id/nextStage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circular_icon_bg_off_white"
+        android:contentDescription="@string/profile_icon"
+        android:src="@drawable/ic_next"
+        app:tint="@color/dark_blue" />
+</LinearLayout>

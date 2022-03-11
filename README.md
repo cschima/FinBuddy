@@ -1,11 +1,11 @@
-# FinBuddy
+# FinGrow
 2022 UW iSchool Capstone Project
 
-## What is FinBuddy
+## What is FinGrow
 ## How to Contribute
 
 ### Notes
-This repository is currently empty and awaiting contributions from the FinBuddy team.
+This repository is currently empty and awaiting contributions from the FinGrow team.
 
 ### Contact Us
 Camden Schiman, cschima@uw.edu<br>

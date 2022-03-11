@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">FinGrow</string>
+    <string name="title_home">Home</string>
+    <string name="title_documents">Documents</string>
+    <string name="title_meetings">Meetings</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_account">Account</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_name">Not a valid name</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="sign_up_failed">"Sign up failed"</string>
+    <string name="title_activity_landing">LandingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_login">Login</string>
+    <string name="title_sign_up">Sign Up</string>
+    <string name="title_activity_starting_routing">StartingRoutingActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_again">Hello Again!</string>
+    <string name="welcome_back">Welcome back, you\'ve\nbeen missed!</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="no_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_to_fingrow">Welcome to\nFinGrow</string>
+    <string name="first_landing_description">We help you achieve your goals\nthrough FREE financial mentors!</string>
+    <string name="get_started">Get Started!</string>
+    <string name="join_our_community">Join our community!</string>
+    <string name="name">Name</string>
+    <string name="have_account">Already have an account?</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+    <string name="step_heading">Step %1$d of %2$d</string>
+    <string name="main_heading">Welcome %1$s!</string>
+    <string name="skip">Skip</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+    <string name="wallet_coins_description">picture of wallet and coins</string>
+    <string name="calendar_target_description">picture of calendar and target</string>
+    <string name="assistant_in_pocket">Assistant in\nyour pocket</string>
+    <string name="realistic_goals">Setting realistic, long-term goals is\neasier with our professional help!</string>
+    <string name="speech_bubble_notepad_description">picture of speech bubble and notepad</string>
+    <string name="gain_financial_knowledge">Gain financial\nknowledge</string>
+    <string name="tips_and_reminders">Tips and reminders from mentors\nwill help you on your journey!</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="recent_activity">Recent Activity</string>
+    <string name="add_goal">Add goal</string>
+    <string name="saving_goals">Saving Goals</string>
+    <string name="see_all">See all</string>
+    <string name="joined_fingrow">Joined FinGrow!</string>
+    <string name="just_now">Just now</string>
+    <string name="profile_icon">profile icon</string>
+
+    <!-- Chat -->
+    <string name="all_chats">All Chats</string>
+    <string name="video_calls">Video Calls</string>
+    <string name="Darren_Smith">Darren Smith</string>
+    <string name="Darren_desc">Happy to be your mentor!…</string>
+    <string name="Shelia_Bates">Shelia Bates</string>
+    <string name="Shelia_desc">To continue our conversation…</string>
+    <string name="time_1_25">1:25 PM</string>
+    <string name="time_2_37">2:37 PM</string>
+    <string name="one">1</string>
+
+
+    <!-- Documents-->
+    <string name="recent">Recent</string>
+    <string name="personal">Personal</string>
+    <string name="download">Download</string>
+    <string name="credit">Credit</string>
+    <string name="ten_items">10 items</string>
+
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="box">box</string>
+    <string name="goal_title">Goal Title</string>
+    <string name="goal_amount">Goal Amount</string>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/landing_bg_gradient"
+    tools:context=".ui.landing.LandingActivity">
+
+    <RelativeLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingStart="20dp"
+        android:paddingTop="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tabBackground="@drawable/tab_selector"
+            android:backgroundTint="@color/transparent"
+            app:tabRippleColor="@null"
+            app:tabIndicatorHeight="0dp"
+            android:layout_alignParentBottom="true"
+            android:minHeight="0dp"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@id/tabDots"/>
+    </RelativeLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="14dp"
+        android:stateListAnimator="@null"
+        android:text="@string/sign_up"
+
+        android:textAllCaps="false"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        app:backgroundTint="@color/reliable_blue"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/loginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infoLayout"
+        app:rippleColor="@color/deep_blue" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="14dp"
+        android:stateListAnimator="@null"
+        android:text="@string/title_login"
+
+        android:textAllCaps="false"
+        android:textColor="@color/light_grey"
+        android:textSize="16sp"
+        android:theme="@style/Widget.AppCompat.Button.Borderless"
+        app:backgroundTint="@color/transparent"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@color/reliable_blue"
+        app:strokeColor="@color/light_grey"
+        app:strokeWidth="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
