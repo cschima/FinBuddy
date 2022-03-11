@@ -23,7 +23,7 @@ class ChatFragment : Fragment() {
         _binding = FragmentChatBinding.inflate(inflater, container, false)
 
         binding.darrenCard.setOnClickListener {
-            Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(activity, "Clicked", Toast.LENGTH_SHORT).show()
         }
 
         val root: View = binding.root

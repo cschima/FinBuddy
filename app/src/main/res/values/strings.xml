@@ -89,4 +89,12 @@
     <string name="time_2_37">2:37 PM</string>
     <string name="one">1</string>
 
+
+    <!-- Documents-->
+    <string name="recent">Recent</string>
+    <string name="personal">Personal</string>
+    <string name="download">Download</string>
+    <string name="credit">Credit</string>
+    <string name="ten_items">10 items</string>
+
 </resources>
