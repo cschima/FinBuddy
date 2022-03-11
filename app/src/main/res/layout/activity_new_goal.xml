@@ -67,7 +67,8 @@
                 android:background="@drawable/circular_icon_bg_mint"
                 android:contentDescription="@string/profile_icon"
                 android:src="@drawable/ic_check"
-                app:tint="@color/dark_blue" />
+                app:tint="@color/dark_blue"
+                android:visibility="gone"/>
 
 
             <TextView
@@ -85,7 +86,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/dark_blue"
                 android:textSize="18sp"
-                android:visibility="visible" />
+                android:visibility="visible"
+                android:alpha=".5"/>
 
         </RelativeLayout>
     </LinearLayout>

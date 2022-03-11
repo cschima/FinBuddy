@@ -82,9 +82,9 @@
     <string name="all_chats">All Chats</string>
     <string name="video_calls">Video Calls</string>
     <string name="Darren_Smith">Darren Smith</string>
-    <string name="Darren_desc">Happy to be your mentor!...</string>
+    <string name="Darren_desc">Happy to be your mentor!…</string>
     <string name="Shelia_Bates">Shelia Bates</string>
-    <string name="Shelia_desc">To continue our conversation...</string>
+    <string name="Shelia_desc">To continue our conversation…</string>
     <string name="time_1_25">1:25 PM</string>
     <string name="time_2_37">2:37 PM</string>
     <string name="one">1</string>
@@ -96,5 +96,11 @@
     <string name="download">Download</string>
     <string name="credit">Credit</string>
     <string name="ten_items">10 items</string>
+
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="box">box</string>
+    <string name="goal_title">Goal Title</string>
+    <string name="goal_amount">Goal Amount</string>
 
 </resources>
