@@ -1,4 +1,4 @@
-package com.example.fingrow.data.model
+package com.example.fingrow.data
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

@@ -1,12 +1,12 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.user_assignments
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.Relation
-import androidx.room.PrimaryKey
+import com.example.fingrow.data.users.User
 
 @Entity(tableName = "user_assignments_table")
-data class UserAssignments (
+data class UserAssignment (
     @Embedded val consultant: User,
 
     @Relation(

@@ -19,9 +19,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
 import com.example.fingrow.R
-import com.example.fingrow.data.User
-import com.example.fingrow.data.UserViewModel
-import com.example.fingrow.data.model.LoggedInUser
+import com.example.fingrow.data.users.User
+import com.example.fingrow.data.users.UserViewModel
+import com.example.fingrow.data.LoggedInUser
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity

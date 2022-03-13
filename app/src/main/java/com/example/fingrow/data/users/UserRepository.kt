@@ -1,4 +1,4 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.users
 
 import androidx.lifecycle.LiveData
 

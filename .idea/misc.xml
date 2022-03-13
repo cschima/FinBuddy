@@ -30,13 +30,17 @@
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_sign_up.xml" value="0.132" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_splasher.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/appbar.xml" value="0.12386018237082067" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_documents.xml" value="0.34953703703703703" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_documents.xml" value="0.2917771883289125" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_landing_view.xml" value="0.132" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_new_goal_stage.xml" value="0.11296296296296296" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_onboarding.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_fourth_onboarding.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_landing_first.xml" value="0.10778985507246377" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_advice.xml" value="0.10778985507246377" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_debt.xml" value="0.10778985507246377" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_income.xml" value="0.10778985507246377" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.10778985507246377" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_landing_view.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_onboarding.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_third_landing_view.xml" value="0.17395833333333333" />

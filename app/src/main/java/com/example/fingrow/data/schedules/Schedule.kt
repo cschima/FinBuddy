@@ -1,10 +1,10 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.schedules
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "meetings_table")
-data class Meetings (
+@Entity(tableName = "schedules_table")
+data class Schedule (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val userName: String,

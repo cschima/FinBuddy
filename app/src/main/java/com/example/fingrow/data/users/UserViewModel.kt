@@ -1,11 +1,10 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.users
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
 class UserViewModel(application: Application): AndroidViewModel(application) {
@@ -26,13 +25,11 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     }
 
     fun findUser(userName: String, password: String): Int {
-
-        var count = 0;
+        var id = 0
         viewModelScope.launch(Dispatchers.IO) {
-            count = repository.findUser(userName, password)
+            id = repository.findUser(userName, password)
         }
-        return 0
-
+        return id
     }
 
 //    fun findUser(userName: String, password: String) = viewModelScope.async {

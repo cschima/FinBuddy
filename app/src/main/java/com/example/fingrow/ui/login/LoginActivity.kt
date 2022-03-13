@@ -8,7 +8,6 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Log
 import android.util.Patterns
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
@@ -16,15 +15,12 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
 import com.example.fingrow.R
-import com.example.fingrow.data.User
-import com.example.fingrow.data.UserViewModel
-import com.example.fingrow.data.model.LoggedInUser
+import com.example.fingrow.data.users.UserViewModel
+import com.example.fingrow.data.LoggedInUser
 import com.example.fingrow.databinding.ActivityLoginBinding
 import com.example.fingrow.ui.signup.SignUpActivity
-import java.io.IOException
 
 class LoginActivity : AppCompatActivity() {
 

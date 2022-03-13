@@ -1,4 +1,4 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.users
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
@@ -7,26 +7,25 @@ import androidx.room.*
 interface UserDao {
 
     // OnConflictStrategy.IGNORE: if there is exactly the same user, then ignore it
-
     @Insert(onConflict = OnConflictStrategy.ABORT)
     suspend fun addUser(user: User)
 
     @Transaction
-    @Query("SELECT COUNT(*) FROM user_table WHERE email = :userName AND password = :password")
+    @Query("SELECT * FROM users_table WHERE email = :userName AND password = :password")
     suspend fun findUser(userName: String, password: String): Int
 
     @Delete
-    fun delete(user:User)
+    fun delete(user: User)
 
-    @Query("SELECT * FROM user_table ORDER BY id ASC")
+    @Query("SELECT * FROM users_table ORDER BY id ASC")
     fun readAllUserData(): LiveData<List<User>>
 
-//    @Query("SELECT * FROM user_assignments_table WHERE userName = :userName")
-//    fun readAllUserAssignmentsData(userName: String): LiveData<List<UserAssignments>>
+    // @Query("SELECT * FROM user_assignments_table WHERE userName = :userName")
+    // fun readAllUserAssignmentsData(userName: String): LiveData<List<UserAssignments>>
 
     // Transactions makes sure there aren't any multithreading issues
     @Transaction
-    @Query("SELECT * FROM user_table WHERE userName = :userName")
+    @Query("SELECT * FROM users_table WHERE userName = :userName")
     fun getUserData(userName: String): LiveData<List<User>>
 
 }

@@ -1,9 +1,9 @@
-package com.example.fingrow.data
+package com.example.fingrow.data.chats
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "chat_table")
+@Entity(tableName = "chats_table")
 data class Chat (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
