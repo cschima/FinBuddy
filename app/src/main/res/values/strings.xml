@@ -102,5 +102,26 @@
     <string name="box">box</string>
     <string name="goal_title">Goal Title</string>
     <string name="goal_amount">Goal Amount</string>
+    <string name="title_activity_new_goal">NewGoalActivity</string>
+    <string name="what_brings_you_to_fingrow">What brings you to FinGrow?</string>
+    <string name="select_your_financial_priorities_below_so_we_can_help_personalize_your_experience">Select your financial priorities below so we can help personalize your experience!</string>
+    <string name="manage_my_financial_plan_or_budget">Manage my financial plan or budget</string>
+    <string name="track_my_income_and_spending">Track my income and spending</string>
+    <string name="get_advice_on_tax_and_investments">Get advice on tax and investments</string>
+    <string name="save_for_long_short_term_financial_goals">Save for long/short term financial goals</string>
+    <string name="something_else">Something else</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="what_type_of_financial_advice_would_you_be_interested_in">What type of financial advice would you be interested in?</string>
+    <string name="this_would_help_our_algorithms_match_you_with_best_suited_consultants">This would help our algorithms match you with best suited consultants!</string>
+    <string name="crisis_and_recovery">Crisis and recovery</string>
+    <string name="risk_management">Risk management</string>
+    <string name="accounting_advisory">Accounting advisory</string>
+    <string name="tax_advisory">Tax advisory</string>
+    <string name="this_well_help_us_understand_your_unique_financial_situation">This well help us understand your unique financial situation</string>
+    <string name="are_you_dealing_with_any_debt">Are you dealing with any debt?</string>
+    <string name="plus_icon">plus icon</string>
 
 </resources>

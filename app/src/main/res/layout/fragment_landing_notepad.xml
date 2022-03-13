@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ui.landing.SecondLandingFragment">
+    tools:context="ui.landing.LandingNotepadFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="35dp"
         android:layout_weight="1"
-        android:src="@drawable/second_landing_view_image"
-        android:contentDescription="@string/calendar_target_description"/>
+        android:src="@drawable/third_landing_view_image"
+        android:contentDescription="@string/speech_bubble_notepad_description"/>
 
     <TextView
         android:id="@+id/textHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="@string/assistant_in_pocket"
+        android:text="@string/gain_financial_knowledge"
         android:textColor="@color/light_grey"
         android:textSize="22sp"
         android:fontFamily="@font/bevietnampro_bold"/>
@@ -28,7 +28,7 @@
         android:id="@+id/textDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/realistic_goals"
+        android:text="@string/tips_and_reminders"
         android:textColor="@color/light_grey"
         android:textSize="14sp"
         android:fontFamily="@font/bevietnampro_regular"/>

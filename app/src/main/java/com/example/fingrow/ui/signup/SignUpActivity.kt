@@ -31,6 +31,8 @@ class SignUpActivity : AppCompatActivity() {
     private lateinit var mUserViewModel: UserViewModel
     private lateinit var binding: ActivitySignUpBinding
 
+    private var validDetails: Boolean = false
+
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
@@ -79,13 +81,11 @@ class SignUpActivity : AppCompatActivity() {
             }
 
             setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE -> {
-                        if (isNewUser(username.text.toString())) {
-                            onboard()
-                        } else {
-                            showSignUpFailed("User already exists")
-                        }
+                if (actionId == EditorInfo.IME_ACTION_DONE && validDetails) {
+                    if (isNewUser(username.text.toString())) {
+                        onboard()
+                    } else {
+                        showSignUpFailed("User already exists")
                     }
                 }
                 false
@@ -118,8 +118,9 @@ class SignUpActivity : AppCompatActivity() {
         if (!isPasswordValid(password)) {
             binding.password.error = "Password must be >5 characters"
         }
-        binding.nextButton.isEnabled = isUserNameValid(username) &&
+        validDetails = isUserNameValid(username) &&
                 isPasswordValid(password) && isNameValid(name)
+        binding.nextButton.isEnabled = validDetails
     }
 
     private fun isNameValid(name: String): Boolean {

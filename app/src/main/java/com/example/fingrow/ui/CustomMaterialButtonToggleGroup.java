@@ -1,4 +1,4 @@
-package com.example.fingrow;
+package com.example.fingrow.ui;
 
 import android.content.Context;
 import android.util.AttributeSet;

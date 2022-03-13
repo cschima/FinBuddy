@@ -11,7 +11,7 @@
     <LinearLayout
         android:id="@+id/activityLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -205,12 +205,13 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            android:layout_marginBottom="15dp"
-            android:src="@drawable/ic_white_plus"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/ic_plus"
+            app:tint="@color/white"
             android:backgroundTint="@color/reliable_blue"
-            android:tintMode="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/plus_icon"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

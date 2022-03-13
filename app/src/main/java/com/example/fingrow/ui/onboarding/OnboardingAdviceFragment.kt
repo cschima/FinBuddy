@@ -1,21 +1,20 @@
 package com.example.fingrow.ui.onboarding
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.fingrow.databinding.FragmentSecondOnboardingBinding
+import com.example.fingrow.databinding.FragmentOnboardingAdviceBinding
 
-class SecondOnboardingFragment : Fragment() {
+class OnboardingAdviceFragment : Fragment() {
 
     object Constants {
-        const val MY_POS = 2
+        const val MY_POS = 3
     }
 
-    private var _binding: FragmentSecondOnboardingBinding? = null
+    private var _binding: FragmentOnboardingAdviceBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,15 +26,18 @@ class SecondOnboardingFragment : Fragment() {
     ): View {
         val onboardingViewModel =
             ViewModelProvider(requireActivity())[OnboardingViewModel::class.java]
-        onboardingViewModel.setPos(SecondOnboardingFragment.Constants.MY_POS)
+        onboardingViewModel.setPos(Constants.MY_POS)
 
-        _binding = FragmentSecondOnboardingBinding.inflate(inflater, container, false)
+        _binding = FragmentOnboardingAdviceBinding.inflate(inflater, container, false)
 
-//        binding.toggleGroup.addOnButtonCheckedListener { _, _, isChecked ->
-//            if (isChecked) {
-//                onboardingViewModel.setValid(true)
-//            }
-//        }
+        onboardingViewModel.setPos(Constants.MY_POS)
+        onboardingViewModel.setValid(binding.toggleGroup.checkedButtonIds.isNotEmpty())
+
+        binding.toggleGroup.addOnButtonCheckedListener { _, _, isChecked ->
+            if (isChecked) {
+                onboardingViewModel.setValid(true)
+            }
+        }
 
         return binding.root
     }

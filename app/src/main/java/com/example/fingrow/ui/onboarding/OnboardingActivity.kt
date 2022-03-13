@@ -22,11 +22,11 @@ class OnboardingActivity : AppCompatActivity() {
         val onboardingViewModel = ViewModelProvider(this)[OnboardingViewModel::class.java]
 
         val fragments: ArrayList<Fragment> = arrayListOf(
-            FirstOnboardingFragment(),
+            OnboardingWhyFingrowFragment(),
             // TODO
             // SecondOnboardingFragment(),
-            ThirdOnboardingFragment(),
-            FourthOnboardingFragment()
+            OnboardingDebtFragment(),
+            OnboardingAdviceFragment()
         )
 
         binding.progress.max = fragments.size

@@ -7,12 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.fingrow.R
 
-class FirstLandingFragment : Fragment() {
+class LandingNotepadFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_landing_view, container, false)
+        return inflater.inflate(R.layout.fragment_landing_notepad, container, false)
     }
 }

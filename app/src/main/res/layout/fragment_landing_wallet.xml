@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ui.landing.ThirdLandingFragment">
+    tools:context="ui.landing.LandingWalletFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="35dp"
         android:layout_weight="1"
-        android:src="@drawable/third_landing_view_image"
-        android:contentDescription="@string/speech_bubble_notepad_description"/>
+        android:src="@drawable/first_landing_view_image"
+        android:contentDescription="@string/wallet_coins_description"/>
 
     <TextView
         android:id="@+id/textHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:text="@string/gain_financial_knowledge"
+        android:text="@string/welcome_to_fingrow"
         android:textColor="@color/light_grey"
         android:textSize="22sp"
         android:fontFamily="@font/bevietnampro_bold"/>
@@ -28,7 +28,7 @@
         android:id="@+id/textDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/tips_and_reminders"
+        android:text="@string/first_landing_description"
         android:textColor="@color/light_grey"
         android:textSize="14sp"
         android:fontFamily="@font/bevietnampro_regular"/>

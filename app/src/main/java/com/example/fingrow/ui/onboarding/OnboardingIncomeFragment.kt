@@ -6,15 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import com.example.fingrow.databinding.FragmentFourthOnboardingBinding
+import com.example.fingrow.databinding.FragmentOnboardingIncomeBinding
 
-class FourthOnboardingFragment : Fragment() {
+class OnboardingIncomeFragment : Fragment() {
 
     object Constants {
-        const val MY_POS = 3
+        const val MY_POS = 2
     }
 
-    private var _binding: FragmentFourthOnboardingBinding? = null
+    private var _binding: FragmentOnboardingIncomeBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -28,16 +28,13 @@ class FourthOnboardingFragment : Fragment() {
             ViewModelProvider(requireActivity())[OnboardingViewModel::class.java]
         onboardingViewModel.setPos(Constants.MY_POS)
 
-        _binding = FragmentFourthOnboardingBinding.inflate(inflater, container, false)
+        _binding = FragmentOnboardingIncomeBinding.inflate(inflater, container, false)
 
-        onboardingViewModel.setPos(Constants.MY_POS)
-        onboardingViewModel.setValid(binding.toggleGroup.checkedButtonIds.isNotEmpty())
-
-        binding.toggleGroup.addOnButtonCheckedListener { _, _, isChecked ->
-            if (isChecked) {
-                onboardingViewModel.setValid(true)
-            }
-        }
+//        binding.toggleGroup.addOnButtonCheckedListener { _, _, isChecked ->
+//            if (isChecked) {
+//                onboardingViewModel.setValid(true)
+//            }
+//        }
 
         return binding.root
     }

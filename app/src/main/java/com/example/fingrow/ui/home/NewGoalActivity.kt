@@ -15,7 +15,7 @@ class NewGoalActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction().apply {
-            replace(binding.stageFragment.id, FirstNewGoalStageFragment())
+            replace(binding.stageFragment.id, NewGoalTitleAmountFragment())
             commit()
         }
     }

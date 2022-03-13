@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.onboarding.OnboardingWhyFingrowFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:text="@string/what_brings_you_to_fingrow"
+        android:textAlignment="center"
+        android:textColor="@color/like_black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/bevietnampro_regular"
+        android:text="@string/select_your_financial_priorities_below_so_we_can_help_personalize_your_experience"
+        android:textAlignment="center"
+        android:textColor="@color/dark_grey"
+        android:textSize="12sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.fingrow.ui.CustomMaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:selectionRequired="true"
+            app:singleSelection="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/firstOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/manage_my_financial_plan_or_budget"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/secondOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/track_my_income_and_spending"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/thirdOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/get_advice_on_tax_and_investments"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fourthOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/save_for_long_short_term_financial_goals"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fifthOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/something_else"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+        </com.example.fingrow.ui.CustomMaterialButtonToggleGroup>
+    </ScrollView>
+</LinearLayout>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.FirstNewGoalStageFragment"
+    tools:context=".ui.home.NewGoalTitleAmountFragment"
     android:background="@drawable/new_goal_bg"
     android:orientation="vertical"
     android:gravity="center_horizontal"

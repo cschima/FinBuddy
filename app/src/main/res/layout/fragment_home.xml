@@ -58,7 +58,7 @@
                 android:textSize="12sp"
                 android:theme="@style/Widget.AppCompat.Button.Borderless"
                 app:backgroundTint="@color/transparent"
-                app:icon="@drawable/ic_add"
+                app:icon="@drawable/ic_plus"
                 app:iconPadding="5dp"
                 app:iconSize="@dimen/add_icon_size"
                 app:iconTint="@color/dark_blue"
