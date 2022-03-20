@@ -123,5 +123,9 @@
     <string name="this_well_help_us_understand_your_unique_financial_situation">This well help us understand your unique financial situation</string>
     <string name="are_you_dealing_with_any_debt">Are you dealing with any debt?</string>
     <string name="plus_icon">plus icon</string>
+    <string name="lowercase_regex">[a-z]</string>
+    <string name="uppercase_regex">[A-Z]</string>
+    <string name="number_regex">[0-9]</string>
+    <string name="symbol_regex">[^a-zA-Z0-9]</string>
 
 </resources>

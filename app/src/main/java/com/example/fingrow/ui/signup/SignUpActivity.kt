@@ -8,7 +8,6 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Patterns
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
@@ -18,27 +17,28 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
-import com.example.fingrow.R
+import com.example.fingrow.SharedHelper
 import com.example.fingrow.data.users.User
 import com.example.fingrow.data.users.UserViewModel
-import com.example.fingrow.data.LoggedInUser
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity
+import java.lang.IllegalArgumentException
 
 class SignUpActivity : AppCompatActivity() {
 
-    private lateinit var mUserViewModel: UserViewModel
+    private lateinit var userViewModel: UserViewModel
     private lateinit var binding: ActivitySignUpBinding
+    private lateinit var sharedHelper: SharedHelper
 
-    private var validDetails: Boolean = false
+    private var isValidDetails: Boolean = false
 
     private val resultLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == RESULT_OK) {
                 signUp(
                     binding.name.text.toString(),
-                    binding.username.text.toString(),
+                    binding.email.text.toString(),
                     binding.password.text.toString()
                 )
             }
@@ -47,56 +47,60 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+        sharedHelper = SharedHelper(this)
+
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val name = binding.name
-        val username = binding.username
+        val email = binding.email
         val password = binding.password
-        val next = binding.nextButton
 
         name.afterTextChanged {
             signUpDataChanged(
-                name.text.toString(),
-                username.text.toString(),
-                password.text.toString()
+                name,
+                email,
+                password
             )
         }
 
-        username.afterTextChanged {
+        email.afterTextChanged {
             signUpDataChanged(
-                name.text.toString(),
-                username.text.toString(),
-                password.text.toString()
+                name,
+                email,
+                password
             )
         }
 
         password.apply {
             afterTextChanged {
                 signUpDataChanged(
-                    name.text.toString(),
-                    username.text.toString(),
-                    password.text.toString()
+                    name,
+                    email,
+                    password
                 )
             }
 
             setOnEditorActionListener { _, actionId, _ ->
-                if (actionId == EditorInfo.IME_ACTION_DONE && validDetails) {
-                    if (isNewUser(username.text.toString())) {
+                if (actionId == EditorInfo.IME_ACTION_DONE && isValidDetails) {
+                    if (isNewUser(email.text.toString())) {
                         onboard()
                     } else {
-                        showSignUpFailed("User already exists")
+                        email.error = "A user with that email already exists"
+                        showSignUpFailed("A user with that email already exists")
                     }
                 }
                 false
             }
         }
 
-        next.setOnClickListener {
-            if (isNewUser(username.text.toString())) {
+        binding.nextButton.setOnClickListener {
+            if (isNewUser(email.text.toString())) {
                 onboard()
             } else {
-                showSignUpFailed("User already exists")
+                email.error = "A user with that email already exists"
+                showSignUpFailed("A user with that email already exists")
             }
         }
 
@@ -107,44 +111,31 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun signUpDataChanged(name: String, username: String, password: String) {
-        // TODO
-        if (!isNameValid(name)) {
-            binding.username.error = "Not a valid name"
+    private fun signUpDataChanged(name: EditText, email: EditText, password: EditText) {
+        val nameValid = sharedHelper.isNameValid(name.text.toString())
+        val emailValid = sharedHelper.isEmailValid(email.text.toString())
+        val passwordValid = sharedHelper.isPasswordValid(password.text.toString())
+        if (name.text.isNotEmpty() && !nameValid) {
+            binding.name.error = "Not a valid name"
         }
-        if (!isUserNameValid(username)) {
-            binding.username.error = "Not a valid username"
+        if (email.text.isNotEmpty() && !emailValid) {
+            email.error = "Not a valid email address"
         }
-        if (!isPasswordValid(password)) {
-            binding.password.error = "Password must be >5 characters"
+        if (password.text.isNotEmpty() && !passwordValid) {
+            var errorString = ""
+            for (err in sharedHelper.getPasswordErrors(password.text.toString())) {
+                errorString += err + "\n"
+            }
+            password.error = errorString.trim()
         }
-        validDetails = isUserNameValid(username) &&
-                isPasswordValid(password) && isNameValid(name)
-        binding.nextButton.isEnabled = validDetails
+
+        isValidDetails = nameValid && emailValid && passwordValid
+        binding.nextButton.isEnabled = isValidDetails
     }
 
-    private fun isNameValid(name: String): Boolean {
-        // TODO
-        return (name.isNotBlank())
-    }
-
-    private fun isUserNameValid(username: String): Boolean {
-        // TODO
-        return if (username.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(username).matches()
-        } else {
-            username.isNotBlank()
-        }
-    }
-
-    private fun isPasswordValid(password: String): Boolean {
-        // TODO
-        return password.length > 5
-    }
-
-    private fun isNewUser(username: String): Boolean {
-        // TODO: Check if user is available
-        return username.isNotEmpty()
+    private fun isNewUser(email: String): Boolean {
+        val user = userViewModel.findUser(email)
+        return user == null
     }
 
     private fun onboard() {
@@ -153,23 +144,21 @@ class SignUpActivity : AppCompatActivity() {
         resultLauncher.launch(intent)
     }
 
-    private fun signUp(name: String, username: String, password: String) {
+    private fun signUp(name: String, email: String, password: String) {
         try {
-            // TODO: handle sign up authentication
-            mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-
-            val user = User(0, name, username, password)
-            mUserViewModel.addUser(user)
-
-            val fakeUser = LoggedInUser(username, name)
+            val user = User(0, name, email, sharedHelper.hashPassword(password), 'N')
+            userViewModel.addUser(user)
+            if (userViewModel.findUser(email) == null) {
+                throw IllegalArgumentException()
+            }
 
             // Save user in SharedPreferences
             val prefs: SharedPreferences = getSharedPreferences("login", MODE_PRIVATE)
             val editor = prefs.edit()
-            editor.putString("user", fakeUser.displayName)
+            editor.putString("user", name)
             editor.apply()
 
-            updateUiWithUser(fakeUser)
+            updateUiWithUser()
             setResult(Activity.RESULT_OK)
         } catch (e: Throwable) {
             showSignUpFailed("Error signing up")
@@ -177,27 +166,15 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun updateUiWithUser(model: LoggedInUser) {
-        // TODO
-        val welcome = getString(R.string.welcome)
-        val displayName = model.displayName
-
-        // Navigate to new page
+    private fun updateUiWithUser() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
         finish()
-
-        Toast.makeText(
-            applicationContext,
-            "$welcome $displayName",
-            Toast.LENGTH_LONG
-        ).show()
     }
 
     private fun showSignUpFailed(errorString: String) {
-        // TODO
-        Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, errorString, Toast.LENGTH_LONG).show()
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {

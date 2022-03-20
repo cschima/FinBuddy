@@ -8,66 +8,68 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.util.Patterns
 import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.MainActivity
-import com.example.fingrow.R
+import com.example.fingrow.SharedHelper
 import com.example.fingrow.data.users.UserViewModel
-import com.example.fingrow.data.LoggedInUser
 import com.example.fingrow.databinding.ActivityLoginBinding
 import com.example.fingrow.ui.signup.SignUpActivity
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var mUserViewModel: UserViewModel
+    private lateinit var userViewModel: UserViewModel
+    private lateinit var sharedHelper: SharedHelper
     private lateinit var binding: ActivityLoginBinding
+
+    private var isValidDetails: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+        sharedHelper = SharedHelper(this)
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val username = binding.username
+        val email = binding.email
         val password = binding.password
-        val login = binding.loginButton
 
-        username.afterTextChanged {
+        email.afterTextChanged {
             loginDataChanged(
-                username.text.toString(),
-                password.text.toString()
+                email,
+                password
             )
         }
 
         password.apply {
             afterTextChanged {
                 loginDataChanged(
-                    username.text.toString(),
-                    password.text.toString()
+                    email,
+                    password
                 )
             }
 
             setOnEditorActionListener { _, actionId, _ ->
-                when (actionId) {
-                    EditorInfo.IME_ACTION_DONE -> {
-                        login(
-                            username.text.toString(),
-                            password.text.toString()
-                        )
-                    }
+                if (actionId == EditorInfo.IME_ACTION_DONE && isValidDetails) {
+                    login(
+                        email.text.toString(),
+                        password.text.toString()
+                    )
                 }
                 false
             }
         }
 
-        login.setOnClickListener {
+        binding.loginButton.setOnClickListener {
             login(
-                username.text.toString(),
+                email.text.toString(),
                 password.text.toString()
             )
         }
@@ -83,81 +85,65 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun loginDataChanged(username: String, password: String) {
-        // TODO
-        if (!isUserNameValid(username)) {
-            binding.username.error = "Not a valid username"
-        }
-        if (!isPasswordValid(password)) {
-            binding.password.error = "Password must be >5 characters"
-        }
-        binding.loginButton.isEnabled = isUserNameValid(username) &&
-                isPasswordValid(password)
-    }
-
-    private fun isUserNameValid(username: String): Boolean {
-        // TODO
-        return if (username.contains('@')) {
-            Patterns.EMAIL_ADDRESS.matcher(username).matches()
+    private fun loginDataChanged(email: EditText, password: EditText) {
+        val emailValid = sharedHelper.isEmailValid(email.text.toString())
+        val passwordValid = sharedHelper.isPasswordValid(password.text.toString())
+        if (email.text.isNotEmpty() && !emailValid) {
+            email.error = "Not a valid email address"
         } else {
-            username.isNotBlank()
+            email.error = null
         }
+        if (password.text.isNotEmpty() && !passwordValid) {
+            var errorString = ""
+            for (err in sharedHelper.getPasswordErrors(password.text.toString())) {
+                errorString += err + "\n"
+            }
+            password.error = errorString.trim()
+        } else {
+            password.error = null
+        }
+
+        isValidDetails = emailValid && passwordValid
+        binding.loginButton.isEnabled = isValidDetails
     }
 
-    private fun isPasswordValid(password: String): Boolean {
-        // TODO
-        return password.length > 5
-    }
-
-    private fun login(username: String, password: String) {
+    private fun login(email: String, password: String) {
         try {
-//            mUserViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-//            val user = mUserViewModel.findUser(username, password)
-//            if (user != 1){
-//                throw IOException()
-//            }
-
-            // TODO: handle login authentication
-            val fakeUser = LoggedInUser(username, username)
+            userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+            val user = userViewModel.findUser(email)
+            if (user == null || user.password != sharedHelper.hashPassword(password)) {
+                binding.email.error = "Email/password combination not found"
+                binding.password.error = "Email/password combination not found"
+                showLoginFailed("Email/password combination not found")
+                setResult(Activity.RESULT_CANCELED)
+                return
+            }
 
             // Save user in SharedPreferences
             val prefs: SharedPreferences = getSharedPreferences("login",
                 MODE_PRIVATE
             )
             val editor = prefs.edit()
-            editor.putString("user", fakeUser.displayName)
+            editor.putString("user", user.name)
             editor.apply()
 
-            updateUiWithUser(fakeUser)
+            updateUiWithUser()
             setResult(Activity.RESULT_OK)
-
         } catch (e: Throwable) {
             showLoginFailed("Error logging in")
             setResult(Activity.RESULT_CANCELED)
         }
     }
 
-    private fun updateUiWithUser(model: LoggedInUser) {
-        // TODO
-        val welcome = getString(R.string.welcome)
-        val displayName = model.displayName
-
-        // Navigate to new page
+    private fun updateUiWithUser() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
 
         finish()
-
-        Toast.makeText(
-            applicationContext,
-            "$welcome $displayName",
-            Toast.LENGTH_LONG
-        ).show()
     }
 
     private fun showLoginFailed(errorString: String) {
-        // TODO
-        Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
+        Toast.makeText(applicationContext, errorString, Toast.LENGTH_LONG).show()
     }
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {

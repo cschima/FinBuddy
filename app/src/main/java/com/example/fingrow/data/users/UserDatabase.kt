@@ -20,10 +20,10 @@ abstract class UserDatabase: RoomDatabase() {
         private var INSTANCE: UserDatabase? = null
 
         // checks if there is an instance of our database
-        // if there is, then retun it,
+        // if there is, then return it,
         // else create one
         // we only want one instance of our room database because
-        // of performace issues with multiple instances
+        // of performance issues with multiple instances
         fun getDatabase(context: Context): UserDatabase {
             val tempInstance = INSTANCE
             if(tempInstance != null) {

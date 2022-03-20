@@ -64,7 +64,7 @@
             android:textSize="18sp"/>
 
         <EditText
-            android:id="@+id/username"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
