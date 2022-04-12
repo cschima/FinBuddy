@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.home.HomeFragment"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
 
     <TextView
         android:id="@+id/text_home"
@@ -64,6 +66,7 @@
                 app:iconTint="@color/dark_blue"
                 app:rippleColor="@color/medium_grey" />
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout

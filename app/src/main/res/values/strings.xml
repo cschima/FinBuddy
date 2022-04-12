@@ -127,5 +127,11 @@
     <string name="uppercase_regex">[A-Z]</string>
     <string name="number_regex">[0-9]</string>
     <string name="symbol_regex">[^a-zA-Z0-9]</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="start_date">Start Date</string>
+    <string name="my_information">My Information</string>
+    <string name="mentors">Mentors</string>
+    <string name="log_out">Log Out</string>
 
 </resources>

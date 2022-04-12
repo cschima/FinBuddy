@@ -25,8 +25,7 @@ class StartingRoutingActivity : AppCompatActivity() {
 
     private fun doWork() {
         if (getSharedPreferences("login", MODE_PRIVATE).getString("user", "") != "") {
-            // val intent = Intent(this, MainActivity::class.java)
-            val intent = Intent(this, LandingActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         } else {
             val intent = Intent(this, LandingActivity::class.java)
