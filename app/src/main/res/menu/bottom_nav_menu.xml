@@ -13,9 +13,9 @@
         android:title="@string/title_documents" />
 
     <item
-        android:id="@+id/navigation_meetings"
-        android:icon="@drawable/ic_calendar"
-        android:title="@string/title_meetings" />
+        android:id="@+id/placeholder"
+        android:title=""
+        android:enabled="false"/>
 
     <item
         android:id="@+id/navigation_chat"
