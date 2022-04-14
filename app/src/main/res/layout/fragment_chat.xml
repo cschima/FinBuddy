@@ -139,6 +139,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/time_text"
                     app:layout_constraintVertical_bias="0.05" />
 
+                <ImageButton
+                    android:id="@+id/darren_meeting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
+                    android:contentDescription="@string/meeting_button"
+                    android:src="@drawable/ic_calendar"
+                    android:backgroundTint="@color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/time_text"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toEndOf="@+id/name_text"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/reliable_blue" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
@@ -207,6 +221,19 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.173" />
+                <ImageButton
+                    android:id="@+id/shelia_meeting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
+                    android:contentDescription="@string/meeting_button"
+                    android:src="@drawable/ic_calendar"
+                    android:backgroundTint="@color/transparent"
+                    app:layout_constraintEnd_toStartOf="@+id/shelia_time_text"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintStart_toEndOf="@+id/shelia_name_text"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/reliable_blue" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
