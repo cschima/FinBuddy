@@ -1,5 +1,6 @@
 package com.example.fingrow
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -10,7 +11,9 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.fingrow.databinding.ActivityMainBinding
+import com.example.fingrow.ui.home.NewGoalActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     // TODO: fix search & navigation icons
 
     private lateinit var binding: ActivityMainBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,17 +37,24 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
         navView.background = null
 
+
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_documents, R.id.navigation_meetings,
+                R.id.navigation_home, R.id.navigation_documents,
                 R.id.navigation_chat, R.id.navigation_account
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val buttonClick = findViewById<FloatingActionButton>(R.id.fab)
+        buttonClick.setOnClickListener {
+            val intent = Intent(this, NewGoalActivity::class.java)
+            startActivity(intent)
+        }
 
         navView.getOrCreateBadge(R.id.navigation_chat).apply {
             number = 1
