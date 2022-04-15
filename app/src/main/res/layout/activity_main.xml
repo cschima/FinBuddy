@@ -22,6 +22,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -30,9 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            app:contentInsetStart="0dp"
             app:contentInsetEnd="0dp"
-            >
+            app:contentInsetStart="0dp">
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/nav_view"
@@ -52,9 +52,11 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/reliable_blue"
             android:src="@drawable/ic_plus"
+            app:layout_anchor="@id/bottom_app_bar"
             app:tint="@color/white"
-            app:layout_anchor="@id/bottom_app_bar" />
+            app:backgroundTint="@color/reliable_blue"/>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -64,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/bottom_app_bar"
+        app:layout_constraintBottom_toBottomOf="@+id/coordinatorLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
