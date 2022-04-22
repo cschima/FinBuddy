@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:text="@string/log_in"
+            android:text="@string/title_login"
             android:textColor="@color/like_black"
             android:fontFamily="@font/bevietnampro_semibold"
             android:textSize="18sp"/>
