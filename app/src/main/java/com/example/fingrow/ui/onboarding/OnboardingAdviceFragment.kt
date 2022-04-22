@@ -5,13 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
+import android.widget.ScrollView
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.databinding.FragmentOnboardingAdviceBinding
 
 class OnboardingAdviceFragment : Fragment() {
 
     object Constants {
-        const val MY_POS = 3
+        const val MY_POS = 5
     }
 
     private var _binding: FragmentOnboardingAdviceBinding? = null
@@ -26,7 +28,6 @@ class OnboardingAdviceFragment : Fragment() {
     ): View {
         val onboardingViewModel =
             ViewModelProvider(requireActivity())[OnboardingViewModel::class.java]
-        onboardingViewModel.setPos(Constants.MY_POS)
 
         _binding = FragmentOnboardingAdviceBinding.inflate(inflater, container, false)
 
@@ -38,6 +39,18 @@ class OnboardingAdviceFragment : Fragment() {
                 onboardingViewModel.setValid(true)
             }
         }
+
+        val scrollView: ScrollView = binding.scrollView
+        scrollView.viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                scrollView.viewTreeObserver
+                    .removeOnGlobalLayoutListener(this)
+                if (binding.linearLayout.height <= scrollView.height) {
+                    scrollView.isVerticalScrollBarEnabled = false
+                }
+            }
+        })
 
         return binding.root
     }

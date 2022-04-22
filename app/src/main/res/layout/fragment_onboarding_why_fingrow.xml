@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:layout_height="match_parent"
     tools:context=".ui.onboarding.OnboardingWhyFingrowFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/bevietnampro_semibold"
-        android:text="@string/what_brings_you_to_fingrow"
-        android:textAlignment="center"
-        android:textColor="@color/like_black"
-        android:textSize="14sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:fontFamily="@font/bevietnampro_regular"
-        android:text="@string/select_your_financial_priorities_below_so_we_can_help_personalize_your_experience"
-        android:textAlignment="center"
-        android:textColor="@color/dark_grey"
-        android:textSize="12sp" />
-
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:text="@string/what_brings_you_to_fingrow"
+            android:textAlignment="center"
+            android:textColor="@color/like_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:text="@string/select_your_financial_priorities_below_so_we_can_help_personalize_your_experience"
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp" />
 
         <com.example.fingrow.ui.CustomMaterialButtonToggleGroup
             android:id="@+id/toggleGroup"
@@ -114,12 +116,12 @@
                 android:insetTop="10dp"
                 android:insetBottom="10dp"
                 android:padding="14dp"
-                android:text="@string/something_else"
+                android:text="@string/not_sure_yet"
                 android:textAllCaps="false"
                 android:textColor="@color/like_black"
                 android:textSize="14sp"
                 android:theme="@style/Widget.AppCompat.Button.Borderless"
                 app:rippleColor="@null" />
         </com.example.fingrow.ui.CustomMaterialButtonToggleGroup>
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

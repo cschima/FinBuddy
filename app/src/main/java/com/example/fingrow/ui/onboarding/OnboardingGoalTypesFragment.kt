@@ -1,23 +1,22 @@
 package com.example.fingrow.ui.onboarding
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewTreeObserver.OnGlobalLayoutListener
+import android.view.ViewTreeObserver
 import android.widget.ScrollView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.example.fingrow.databinding.FragmentOnboardingWhyFingrowBinding
+import com.example.fingrow.databinding.FragmentOnboardingGoalTypesBinding
 
-
-class OnboardingWhyFingrowFragment : Fragment() {
+class OnboardingGoalTypesFragment : Fragment() {
 
     object Constants {
-        const val MY_POS = 1
+        const val MY_POS = 2
     }
 
-    private var _binding: FragmentOnboardingWhyFingrowBinding? = null
+    private var _binding: FragmentOnboardingGoalTypesBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -30,7 +29,7 @@ class OnboardingWhyFingrowFragment : Fragment() {
         val onboardingViewModel =
             ViewModelProvider(requireActivity())[OnboardingViewModel::class.java]
 
-        _binding = FragmentOnboardingWhyFingrowBinding.inflate(inflater, container, false)
+        _binding = FragmentOnboardingGoalTypesBinding.inflate(inflater, container, false)
 
         onboardingViewModel.setPos(Constants.MY_POS)
         onboardingViewModel.setValid(binding.toggleGroup.checkedButtonIds.isNotEmpty())
@@ -42,7 +41,8 @@ class OnboardingWhyFingrowFragment : Fragment() {
         }
 
         val scrollView: ScrollView = binding.scrollView
-        scrollView.viewTreeObserver.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
+        scrollView.viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
             override fun onGlobalLayout() {
                 scrollView.viewTreeObserver
                     .removeOnGlobalLayoutListener(this)

@@ -134,5 +134,21 @@
     <string name="my_information">My Information</string>
     <string name="mentors">Mentors</string>
     <string name="log_out">Log Out</string>
+    <string name="not_sure_yet">Not sure yet</string>
+    <string name="under_5k">Under $5K</string>
+    <string name="above_120k">Above $120K</string>
+    <string name="what_financial_goals_are_you_hoping_to_achieve">What financial goals are you hoping to achieve?</string>
+    <string name="goal_types_help">Short-term goals usually help you buy an item on short notice (ex: new phone, new furniture, etc.)\n\nMid-term goals usually help you pay for an event or special day in the somewhat near future (wedding, graduation, etc.)\n\nLong-term goals usually help you plan for situations in the distant future (retirement, paying for children\'s college, etc.)</string>
+    <string name="short_term">Short-term</string>
+    <string name="mid_term">Mid-term</string>
+    <string name="long_term">Long-term</string>
+    <string name="what_is_your_annual_gross_household_income">What is your annual gross household income?</string>
+    <string name="approximately">Approximately:</string>
+    <string name="_5k_or_less">$5K or less</string>
+    <string name="how_many_people_live_in_your_household">How many people live in your household?</string>
+    <string name="low_or_less">$%1$dK or less</string>
+    <string name="high_or_more">$%1$dK or more</string>
+    <string name="slider_value_string">$%1$dK</string>
+    <string name="num">#</string>
 
 </resources>

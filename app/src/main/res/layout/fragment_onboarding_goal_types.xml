@@ -6,7 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.onboarding.OnboardingAdviceFragment">
+    tools:context=".ui.onboarding.OnboardingGoalTypesFragment">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/bevietnampro_semibold"
-            android:text="@string/what_type_of_financial_advice_would_you_be_interested_in"
+            android:text="@string/what_financial_goals_are_you_hoping_to_achieve"
             android:textAlignment="center"
             android:textColor="@color/like_black"
             android:textSize="14sp" />
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
             android:fontFamily="@font/bevietnampro_regular"
-            android:text="@string/this_would_help_our_algorithms_match_you_with_best_suited_consultants"
+            android:text="@string/goal_types_help"
             android:textAlignment="center"
             android:textColor="@color/dark_grey"
             android:textSize="12sp" />
@@ -52,7 +52,7 @@
                 android:insetTop="10dp"
                 android:insetBottom="10dp"
                 android:padding="14dp"
-                android:text="@string/crisis_and_recovery"
+                android:text="@string/short_term"
                 android:textAllCaps="false"
                 android:textColor="@color/like_black"
                 android:textSize="14sp"
@@ -68,7 +68,7 @@
                 android:insetTop="10dp"
                 android:insetBottom="10dp"
                 android:padding="14dp"
-                android:text="@string/risk_management"
+                android:text="@string/mid_term"
                 android:textAllCaps="false"
                 android:textColor="@color/like_black"
                 android:textSize="14sp"
@@ -84,7 +84,7 @@
                 android:insetTop="10dp"
                 android:insetBottom="10dp"
                 android:padding="14dp"
-                android:text="@string/accounting_advisory"
+                android:text="@string/long_term"
                 android:textAllCaps="false"
                 android:textColor="@color/like_black"
                 android:textSize="14sp"
@@ -93,22 +93,6 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fourthOption"
-                style="@style/MyMaterialButtonOutlineStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bevietnampro_regular"
-                android:insetTop="10dp"
-                android:insetBottom="10dp"
-                android:padding="14dp"
-                android:text="@string/tax_advisory"
-                android:textAllCaps="false"
-                android:textColor="@color/like_black"
-                android:textSize="14sp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:rippleColor="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/fifthOption"
                 style="@style/MyMaterialButtonOutlineStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

@@ -4,6 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_goal_types.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_income.xml" value="0.2" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/option_item.xml" value="0.11005434782608696" />
         <entry key="app/src/main/res/drawable/circular_icon_bg_mint.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.143" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />

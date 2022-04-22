@@ -23,8 +23,8 @@ class OnboardingActivity : AppCompatActivity() {
 
         val fragments: ArrayList<Fragment> = arrayListOf(
             OnboardingWhyFingrowFragment(),
-            // TODO
-            // SecondOnboardingFragment(),
+            OnboardingGoalTypesFragment(),
+            OnboardingIncomeFragment(),
             OnboardingDebtFragment(),
             OnboardingAdviceFragment()
         )
@@ -41,7 +41,7 @@ class OnboardingActivity : AppCompatActivity() {
             )
 
             binding.skipButton.setOnClickListener {
-                // TODO
+                // TODO clear selections
                 if (pos < fragments.size) {
                     swapFrag(fragments[pos])
                 }
