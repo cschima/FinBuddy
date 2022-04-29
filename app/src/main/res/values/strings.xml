@@ -150,5 +150,11 @@
     <string name="high_or_more">$%1$dK or more</string>
     <string name="slider_value_string">$%1$dK</string>
     <string name="num">#</string>
+    <string name="ribbon">ribbon</string>
+    <string name="_0">$0</string>
+    <string name="outof_0">/$0</string>
+    <string name="this_month">This month</string>
+    <string name="last_month">Last month</string>
+    <string name="overall">Overall</string>
 
 </resources>

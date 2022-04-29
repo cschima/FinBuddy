@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment"
     android:paddingStart="20dp"
-    android:paddingEnd="20dp">
+    android:paddingEnd="20dp"
+    tools:context=".ui.home.HomeFragment">
 
     <TextView
         android:id="@+id/text_home"
@@ -19,10 +19,155 @@
         android:textColor="@color/black"
         android:textSize="18sp" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/summaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progressBack"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha=".2"
+            android:progress="75"
+            android:rotation="-135"
+            app:indicatorColor="@color/toothpaste"
+            app:indicatorInset="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5"
+            app:trackCornerRadius="6dp"
+            app:trackThickness="12dp" />
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:progress="50"
+            android:rotation="-135"
+            app:indicatorColor="@color/mint"
+            app:indicatorInset="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/progressBack"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="@id/progressBack"
+            app:layout_constraintStart_toStartOf="@id/progressBack"
+            app:layout_constraintTop_toTopOf="@id/progressBack"
+            app:layout_constraintWidth_percent=".5"
+            app:trackCornerRadius="6dp"
+            app:trackThickness="12dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/progressBack"
+            app:layout_constraintEnd_toEndOf="@id/progressBack"
+            app:layout_constraintStart_toStartOf="@id/progressBack"
+            app:layout_constraintTop_toTopOf="@id/progressBack"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:contentDescription="@string/ribbon"
+                android:src="@drawable/ic_certificate_badge"
+                app:tint="@color/reliable_blue" />
+
+            <TextView
+                android:id="@+id/thisMonthSavings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/_0"
+                android:textColor="@color/like_black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/thisMonthGoal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:text="@string/outof_0"
+                android:textColor="@color/darkest_grey"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_medium"
+                android:text="@string/this_month"
+                android:textColor="@color/like_black"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/progressBack"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/lastMonthSavings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/_0"
+                android:textColor="@color/like_black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/lastMonthText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:text="@string/last_month"
+                android:textColor="@color/darkest_grey"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/medium_grey" />
+
+            <TextView
+                android:id="@+id/overallSavings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/_0"
+                android:textColor="@color/like_black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/overallText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:text="@string/overall"
+                android:textColor="@color/darkest_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/medium_grey" />
+
     <LinearLayout
         android:id="@+id/goalsLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
 
@@ -37,10 +182,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/bevietnampro_semibold"
+                android:paddingBottom="5dp"
                 android:text="@string/saving_goals"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:paddingBottom="5dp"/>
+                android:textSize="16sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/addGoalButton"
@@ -68,105 +213,4 @@
         </LinearLayout>
 
     </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/activityLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp">
-
-            <TextView
-                android:id="@+id/text_activity"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/bevietnampro_semibold"
-                android:text="@string/recent_activity"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/seeAllButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bevietnampro_semibold"
-                android:includeFontPadding="false"
-                android:insetTop="0dp"
-                android:insetBottom="0dp"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
-                android:padding="5dp"
-                android:stateListAnimator="@null"
-                android:text="@string/see_all"
-                android:textAllCaps="false"
-                android:textColor="@color/dark_blue"
-                android:textSize="12sp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:backgroundTint="@color/transparent"
-                app:rippleColor="@color/medium_grey"/>
-        </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            card_view:cardCornerRadius="20dp"
-            card_view:cardBackgroundColor="@color/white"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            card_view:cardElevation="5dp">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="20dp">
-
-                <ImageView
-                    android:id="@+id/card_icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_profile"
-                    android:contentDescription="@string/profile_icon"
-                    android:background="@drawable/circular_icon_bg_mint"
-                    card_view:layout_constraintStart_toStartOf="parent"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintBottom_toBottomOf="parent"/>
-
-                <TextView
-                    android:id="@+id/info_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/joined_fingrow"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/bevietnampro_semibold"
-                    card_view:layout_constraintTop_toTopOf="parent"
-                    card_view:layout_constraintBottom_toTopOf="@id/time_text"
-                    card_view:layout_constraintStart_toEndOf="@+id/card_icon"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginBottom="5dp" />
-
-
-                <TextView
-                    android:id="@+id/time_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/just_now"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/bevietnampro_medium"
-                    card_view:layout_constraintTop_toBottomOf="@id/info_text"
-                    card_view:layout_constraintBottom_toBottomOf="parent"
-                    card_view:layout_constraintStart_toEndOf="@+id/card_icon"
-                    android:layout_marginStart="20dp"/>
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-
 </LinearLayout>

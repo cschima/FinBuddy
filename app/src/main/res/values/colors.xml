@@ -19,6 +19,8 @@
     <color name="like_black">#161616</color>
     <color name="dark_grey">#96969B</color>
     <color name="medium_grey">#C5CBD4</color>
+    <color name="toothpaste">#93E1B8</color>
+    <color name="electric_yellow">#F2F21F</color>
 
     <!--Android Colors-->
     <color name="purple_200">#FFBB86FC</color>

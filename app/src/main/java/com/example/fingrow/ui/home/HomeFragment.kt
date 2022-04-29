@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.fingrow.R
 import com.example.fingrow.databinding.FragmentHomeBinding
-import com.example.fingrow.ui.onboarding.OnboardingActivity
 
 class HomeFragment : Fragment() {
 
@@ -42,6 +42,18 @@ class HomeFragment : Fragment() {
             val intent = Intent(activity, NewGoalActivity::class.java)
             resultLauncher.launch(intent)
         }
+
+        val progressBack = binding.progressBack
+        val progress = binding.progress
+        progress.viewTreeObserver.addOnGlobalLayoutListener(object :
+            ViewTreeObserver.OnGlobalLayoutListener {
+            override fun onGlobalLayout() {
+                progressBack.viewTreeObserver
+                    .removeOnGlobalLayoutListener(this)
+                progressBack.indicatorSize = progressBack.width
+                progress.indicatorSize = progress.width
+            }
+        })
 
         return binding.root
     }
