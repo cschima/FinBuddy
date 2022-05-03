@@ -31,7 +31,7 @@ A pro-bono financial consulting app that matches users based on their personaliz
     - Room Database
     - Material
     - Lifecycle
-    - kotlinx coroutines
+    - Kotlinx Coroutines
 - Java Version 1.8
 - Andriod 11, API 30
     - Minimum Andriod 5.0, API 21
@@ -77,7 +77,7 @@ General: fingrowuw@gmail.com</br>
 
 ## Contributors:
 
-### Team Point A to B 2021-2022
+### Team Point A to B (2021-2022)
 Camden Schiman, cschima@uw.edu</br>
 Justin Ung, ungjus19@uw.edu</br>
 Quynh Doan, qdoan@uw.edu</br>
