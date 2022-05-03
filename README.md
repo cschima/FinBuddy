@@ -56,17 +56,17 @@ A pro-bono financial consulting app that matches users based on their personaliz
 - Sign-in/ Login: prompts user for username, email, and password
 - Onboarding: asks users a series of questions related to their finances
 - Main Activity: Main page holding access to other pages
-    - Navbar fragments: Goals page (main), Doc, Chat, Profile
+    - Navbar fragments: Home, Documents, Chat, Profile
 - New Goals: Allows user to add new goals
 
 ### Needed Work
-- ```Chat```: Intended to use SendBird library for chat and video call integration.
-- ```Link to bank```: Currently, money added towards a goal needs to be done manually and as no relation to their bank.
-- ```Finincial Mentor side```: The current implementation is only for clients/mentees. There needs to be another implementation for mentors of the app
-- ```Algorithm to match Mentors```:
+- ```Chat```: Intended to use [SendBird](https://sendbird.com/) for chat and video call integration.
+- ```Link to bank```: Currently, money added towards a goal needs to be done manually and as no relation to their bank. Intended to use [Plaid](https://plaid.com/). 
+- ```Finincial Mentor side```: The current implementation is only for clients/mentees. There needs to be another implementation for mentors of the app.
+- ```Algorithm to match Mentors```: We are currnetly hardcoding our Mentors. Ideally, there would be an algorithm that take into account their onboarding selections and matches them with mentors that suit their needs. Ex: Debt Management, Long-term Goal tracking.
 - ```Scanning Docmuments```: Intended to use camera to photograph financial documents that could be stored and sent to finaincial mentors for review and guidance
 - ```Hook up with cloud server```: All data is currently stored locally with Room database.
-- ```Database Relationships```: Current database relationship not fleshed out. Needs review. 
+- ```Database Relationships, ERD Diagram```: Current database relationship not fleshed out. Needs review and ideallly create a ERD Diagram.
 
 ## License
 MIT License: ```LICENSE.txt```
