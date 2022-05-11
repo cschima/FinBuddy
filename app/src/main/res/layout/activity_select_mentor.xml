@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg_gradient"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    tools:context=".ui.mentor.SelectMentorActivity">
+
+    <RelativeLayout
+        android:id="@+id/headingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/stepHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:text="@null"
+            android:textColor="@color/like_black"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/skipButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:padding="5dp"
+            android:stateListAnimator="@null"
+            android:text="@string/skip"
+            android:textAllCaps="false"
+            android:textColor="@color/reliable_blue"
+            android:textSize="12sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:backgroundTint="@color/transparent"
+            app:rippleColor="@color/medium_grey" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tabLayout"
+        app:tabIndicatorColor="@color/reliable_blue"
+        app:tabIndicatorHeight="5dp"
+        app:tabTextColor="@color/black"/>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+
+</LinearLayout>

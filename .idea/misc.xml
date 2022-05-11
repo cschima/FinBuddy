@@ -3,57 +3,76 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="../../../../../layout/custom_preview.xml" value="0.2222222222222222" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_new_goal.xml" value="0.11666666666666667" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_onboarding.xml" value="0.12386018237082067" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_account.xml" value="0.16168478260869565" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_home.xml" value="0.4" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_new_goal_title_amount.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_goal_types.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_income.xml" value="0.2" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/option_item.xml" value="0.11005434782608696" />
+        <entry key="..\:/Users/camde/.gradle/caches/transforms-3/d2be0a07ac682004ffbddd9c163a1cf7/transformed/appcompat-1.4.1/res/drawable/abc_btn_default_mtrl_shape.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/card_icon_bg.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/circular_icon_bg_off_white.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/edit_text_bg.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/ic_account_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/onboarding_bg_gradient.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_button_bg.xml" value="0.109" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_login_bg_gradient.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_login_content_bg.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_indicator_default.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_indicator_selected.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_selector.xml" value="0.133" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/font/be_vietnam_pro_reg.xml" value="0.15833333333333333" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_landing.xml" value="0.2" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_login.xml" value="0.2" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_new_goal.xml" value="0.132" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_onboarding.xml" value="0.132" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_sign_up.xml" value="0.132" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_splasher.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/appbar.xml" value="0.12386018237082067" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_landing_view.xml" value="0.132" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_new_goal_stage.xml" value="0.11296296296296296" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_first_onboarding.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_fourth_onboarding.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_landing_view.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_onboarding.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_third_landing_view.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_third_onboarding.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/menu/appbar_actions.xml" value="0.23425925925925925" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/circular_icon_bg_mint.xml" value="0.12" />
-        <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.143" />
-        <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
-        <entry key="app/src/main/res/drawable/onboarding_bg_gradient.xml" value="0.1115" />
-        <entry key="app/src/main/res/drawable/transparent_background.xml" value="0.1655" />
-        <entry key="app/src/main/res/layout/activity_landing.xml" value="0.3037037037037037" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.259185791015625" />
-        <entry key="app/src/main/res/layout/activity_new_goal.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.35462962962962963" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/xml/root_preferences.xml" value="0.12386018237082067" />
+        <entry key="app/src/main/res/drawable/chat_header.xml" value="0.213" />
+        <entry key="app/src/main/res/drawable/chat_input_background.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/circular_icon_bg_mint.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/circular_icon_online_teal.xml" value="0.2115" />
+        <entry key="app/src/main/res/drawable/incoming_text_bubble.xml" value="0.2115" />
+        <entry key="app/src/main/res/layout/activity_darren_chat.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/activity_landing.xml" value="0.3974358974358974" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3974358974358974" />
+        <entry key="app/src/main/res/layout/activity_matches.xml" value="0.3796875" />
+        <entry key="app/src/main/res/layout/activity_new_goal.xml" value="0.37222222222222223" />
+        <entry key="app/src/main/res/layout/activity_onboarding.xml" value="0.3338943481445313" />
+        <entry key="app/src/main/res/layout/activity_select_mentor.xml" value="0.29688415527343753" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/chat_row.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_carline.xml" value="0.38958333333333334" />
+        <entry key="app/src/main/res/layout/fragment_caroline_experience.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_darren.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_documents.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_first_landing_view.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_first_onboarding.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3974358974358974" />
-        <entry key="app/src/main/res/layout/fragment_meetings.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_second_landing_view.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_second_onboarding.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_third_landing_view.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_third_onboarding.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/menu/appbar_actions.xml" value="0.3974358974358974" />
-        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_new_goal_title_amount.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_onboarding_advice.xml" value="0.37222222222222223" />
+        <entry key="app/src/main/res/layout/fragment_onboarding_debt.xml" value="0.37222222222222223" />
+        <entry key="app/src/main/res/layout/fragment_onboarding_income.xml" value="0.37222222222222223" />
+        <entry key="app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.37222222222222223" />
+        <entry key="app/src/main/res/layout/fragment_sheila.xml" value="0.5192977905273438" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.4036458333333333" />
-      </ProjectState>
-    </option>
   </component>
 </project>
