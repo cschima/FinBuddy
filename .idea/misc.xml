@@ -4,12 +4,29 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../layout/custom_preview.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/circular_icon_bg_off_white.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/circular_icon_bg_white.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_login_activity_bg_bg.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_login_bg_gradient.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/signup_login_content_bg.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_indicator_default.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_indicator_default2.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_indicator_selected.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_selector.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/drawable/tab_selector2.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_landing.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_login.xml" value="0.1" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_new_goal.xml" value="0.11666666666666667" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_onboarding.xml" value="0.12386018237082067" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_new_goal.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_onboarding.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/activity_sign_up.xml" value="0.268" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/card_adapter.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_account.xml" value="0.16168478260869565" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_home.xml" value="0.268" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_new_goal_date.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_new_goal_title_amount.xml" value="0.1" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_advice.xml" value="0.2546875" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_debt.xml" value="0.2546875" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_goal_types.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_income.xml" value="0.2" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.1" />

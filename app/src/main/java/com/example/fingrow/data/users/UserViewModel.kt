@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
@@ -19,24 +18,25 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         readAllData = repository.readAllData
     }
 
-    fun addUser(user: User) {
+    fun addUser(user: User): Boolean {
+        var success = true
         viewModelScope.launch {
-            repository.addUser(user)
+            success = repository.addUser(user)
         }
-    }
-
-    fun userCount(): Int {
-        var userCount = 0
-        viewModelScope.launch {
-            userCount = repository.userCount()
-        }
-        return userCount
+        return success
     }
 
     fun findUser(email: String): User? {
-        val user = runBlocking {
+        return runBlocking {
             repository.findUser(email)
         }
-        return user
+    }
+
+    fun updateUser(user: User): Boolean {
+        var success = true
+        viewModelScope.launch {
+            success = repository.updateUser(user)
+        }
+        return success
     }
 }

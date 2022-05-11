@@ -10,5 +10,9 @@ data class User(
     val name: String,
     val email: String,
     val password: String,
-    val is_consultant: Char
+    val start_date: String,
+    val total_saved: Int,
+    val last_month_saved: Int,
+    val this_month_saved: Int,
+    val last_month_updated: String
 )

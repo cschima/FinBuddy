@@ -1,16 +1,12 @@
 package com.example.fingrow.ui.login
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -110,7 +106,7 @@ class LoginActivity : AppCompatActivity() {
     private fun login(email: String, password: String) {
         try {
             userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-            val user = userViewModel.findUser(email)
+            val user = userViewModel.findUser(email.lowercase())
             if (user == null || user.password != sharedHelper.hashPassword(password)) {
                 binding.email.error = "Email/password combination not found"
                 binding.password.error = "Email/password combination not found"
@@ -119,12 +115,15 @@ class LoginActivity : AppCompatActivity() {
                 return
             }
 
+            sharedHelper.checkLastMonthUpdated(user)
+
             // Save user in SharedPreferences
-            val prefs: SharedPreferences = getSharedPreferences("login",
-                MODE_PRIVATE
-            )
+            val prefs: SharedPreferences = getSharedPreferences("login", MODE_PRIVATE)
             val editor = prefs.edit()
-            editor.putString("user", user.name)
+            editor.putString("name", user.name)
+            editor.putString("email", user.email)
+            editor.putString("start_date", user.start_date)
+            editor.putString("total_saved", user.total_saved.toString())
             editor.apply()
 
             updateUiWithUser()
@@ -137,6 +136,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUiWithUser() {
         val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
 
         finish()
@@ -144,23 +144,6 @@ class LoginActivity : AppCompatActivity() {
 
     private fun showLoginFailed(errorString: String) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_LONG).show()
-    }
-
-    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-        if (event.action == MotionEvent.ACTION_DOWN) {
-            val v = currentFocus
-            if (v is EditText) {
-                val outRect = Rect()
-                v.getGlobalVisibleRect(outRect)
-                if (!outRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
-                    v.clearFocus()
-                    val imm: InputMethodManager =
-                        getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
-                }
-            }
-        }
-        return super.dispatchTouchEvent(event)
     }
 }
 

@@ -1,16 +1,12 @@
 package com.example.fingrow.ui.signup
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Rect
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.MotionEvent
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -23,7 +19,10 @@ import com.example.fingrow.data.users.UserViewModel
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity
+import kotlinx.coroutines.runBlocking
 import java.lang.IllegalArgumentException
+import java.text.SimpleDateFormat
+import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -134,7 +133,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun isNewUser(email: String): Boolean {
-        val user = userViewModel.findUser(email)
+        val user = runBlocking { userViewModel.findUser(email.lowercase()) }
         return user == null
     }
 
@@ -146,16 +145,36 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun signUp(name: String, email: String, password: String) {
         try {
-            val user = User(0, name, email, sharedHelper.hashPassword(password), 'N')
+            val startDate = Calendar.getInstance().time
+            val formatter = SimpleDateFormat.getDateInstance() //or use getDateTimeInstance()
+            val formattedDate = formatter.format(startDate)
+            val user = User(
+                0,
+                name,
+                email.lowercase(),
+                sharedHelper.hashPassword(password),
+                formattedDate,
+                0,
+                0,
+                0,
+                (Calendar.getInstance().get(Calendar.MONTH) + 1).toString() +
+                        "/" + Calendar.getInstance().get(Calendar.YEAR).toString()
+            )
+
             userViewModel.addUser(user)
-            if (userViewModel.findUser(email) == null) {
+            if (userViewModel.findUser(email.lowercase()) == null) {
                 throw IllegalArgumentException()
             }
 
             // Save user in SharedPreferences
             val prefs: SharedPreferences = getSharedPreferences("login", MODE_PRIVATE)
             val editor = prefs.edit()
-            editor.putString("user", name)
+            editor.putString("name", name)
+            editor.putString("email", email)
+            editor.putString("start_date", formattedDate)
+            editor.putString("total_saved", "0")
+            editor.putString("last_month_saved", "0")
+            editor.putString("this_month_saved", "0")
             editor.apply()
 
             updateUiWithUser()
@@ -168,6 +187,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun updateUiWithUser() {
         val intent = Intent(this, MainActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
 
         finish()
@@ -175,23 +195,6 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun showSignUpFailed(errorString: String) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_LONG).show()
-    }
-
-    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-        if (event.action == MotionEvent.ACTION_DOWN) {
-            val v = currentFocus
-            if (v is EditText) {
-                val outRect = Rect()
-                v.getGlobalVisibleRect(outRect)
-                if (!outRect.contains(event.rawX.toInt(), event.rawY.toInt())) {
-                    v.clearFocus()
-                    val imm: InputMethodManager =
-                        getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
-                }
-            }
-        }
-        return super.dispatchTouchEvent(event)
     }
 }
 

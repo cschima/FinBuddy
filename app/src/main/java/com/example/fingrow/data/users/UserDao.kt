@@ -25,9 +25,6 @@ interface UserDao {
     @Query("SELECT * FROM users_table ORDER BY id ASC")
     fun readAllUserData(): LiveData<List<User>>
 
-    // Transactions makes sure there aren't any multithreading issues
-    @Transaction
-    @Query("SELECT * FROM users_table WHERE email = :email")
-    fun getUserData(email: String): LiveData<List<User>>
-
+    @Update
+    suspend fun updateUser(user: User)
 }

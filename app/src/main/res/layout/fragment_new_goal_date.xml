@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:background="@drawable/new_goal_bg"
+    android:backgroundTint="@color/light_grey"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".ui.home.NewGoalDateFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:text="@string/when_do_you_want_to_achieve_this_by"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/medium_grey" />
+
+    <com.example.fingrow.ui.CustomMaterialButtonToggleGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/flexibleButton"
+            style="@style/MySingleMaterialButtonOutlineStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="14dp"
+            android:text="@string/i_m_flexible"
+            android:textAllCaps="false"
+            android:textColor="@color/like_black"
+            android:textSize="14sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:rippleColor="@color/mint" />
+    </com.example.fingrow.ui.CustomMaterialButtonToggleGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.super_rabbit.wheel_picker.WheelPicker
+            android:id="@+id/monthPicker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5"
+            app:max="12"
+            app:min="1"
+            app:selectedTextColor="@color/like_black"
+            app:textColor="@color/dark_grey"
+            app:textSize="16sp"
+            app:wheelItemCount="7"
+            app:wrapSelectorWheel="true" />
+
+        <com.super_rabbit.wheel_picker.WheelPicker
+            android:id="@+id/yearPicker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent=".5"
+            app:selectedTextColor="@color/like_black"
+            app:textColor="@color/dark_grey"
+            app:textSize="16sp"
+            app:wheelItemCount="7" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

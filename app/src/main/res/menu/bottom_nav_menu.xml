@@ -13,11 +13,6 @@
         android:title="@string/title_documents" />
 
     <item
-        android:id="@+id/placeholder"
-        android:title=""
-        android:enabled="false"/>
-
-    <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_chat"
         android:title="@string/title_chat" />
