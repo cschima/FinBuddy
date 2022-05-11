@@ -88,6 +88,13 @@
     <string name="time_2_37">2:37 PM</string>
     <string name="one">1</string>
     <string name="meeting_button">Meeting Button</string>
+    <string name="online">Online</string>
+    <string name="type_something">Type Something</string>
+    <string name="phone">phone</string>
+    <string name="videocam">videocam</string>
+    <string name="Darren_chat_activity">Darren Chat Activity</string>
+    <string name="Darren_message">Happy to be your mentor! Feel free to ask me anything.</string>
+    <string name="am1030">10:30 am</string>
 
 
     <!-- Documents-->
@@ -173,6 +180,50 @@
     <string name="this_is_a">"This is a "</string>
     <string name="flexible_deadline">flexible deadline!</string>
     <string name="dont_forget_to_keep_saving">Don\'t forget to keep saving!</string>
+
+
+
+    <!--Your advisor matches-->
+    <string name="matches_activity">MatchesActivity</string>
+    <string name="explore">Explore</string>
+    <string name="your_advisor_matches">Your advisor matches</string>
+    <string name="im_interested">Choose \"I\'m interested\"</string>
+    <string name="take_your_time">Take your time getting to know these pro-bono experts and choose who you want to chat with by tapping on \"I\'m interested\" on the next page. The potential mentors will reach out to you via chat. You can skip if you can\'t decide yet and go back to this in</string>
+    <string name="my_profile">My Profile\t</string>
+    <string name="tab">tab.</string>
+    <string name="once_you">Once you\'ve get to know them enough, you\'ll get to</string>
+    <string name="request">request\t</string>
+    <string name="word_one">one\t</string>
+    <string name="of_them_as">of them as your mentor via\t</string>
+
+    <!--Select mentor-->
+    <string name="select_mentor_activity">SelectMentorActivity</string>
+    <string name="Experience">Experience</string>
+
+    <string name="linkedin">linkedin</string>
+    <string name="gmail">gmail</string>
+    <string name="heart_interested">I\'m interested</string>
+
+    <!--Shelia Bates-->
+    <string name="senior_advisor">Senior Advisor | Risk Management</string>
+    <string name="ffp_foundation">FFP Foundation | 10 years</string>
+
+    <!--Darren Smith-->
+    <string name="senior_cons">Senior Consultant | Financial Planner</string>
+    <string name="twelve_years">FFP Foundation | 12 years</string>
+
+    <!--Carline Wang-->
+    <string name="carline_wang">Caroline Wang</string>
+    <string name="experienced_advisor">Senior Consultant | Debt Specialist</string>
+    <string name="five_years">FFP Foundation | 5 years</string>
+    <string name="financial_advisor">Financial Advisor</string>
+    <string name="ffp">FFP Foundation</string>
+    <string name="ffp_time">May 2020 - Present . 11 Month</string>
+    <string name="airbnb">Airbnb</string>
+    <string name="airbnb_time">May 2018 - Apr 2020 . 11 Month</string>
+    <string name="google">Google</string>
+    <string name="google_time">June 2017 - Apr 2018 . 10 Month</string>
+
 
 
 </resources>

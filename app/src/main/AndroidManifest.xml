@@ -49,7 +49,22 @@
             android:name=".ui.home.NewGoalActivity"
             android:exported="false"
             android:label="@string/title_activity_new_goal"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.mentor.MatchesActivity"
+            android:label="@string/matches_activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.mentor.SelectMentorActivity"
+            android:label="@string/select_mentor_activity"
+            android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.chat.DarrenChatActivity"
+            android:label="@string/Darren_chat_activity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan"/>
     </application>
 
 </manifest>

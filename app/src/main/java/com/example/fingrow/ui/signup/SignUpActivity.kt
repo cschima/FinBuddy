@@ -18,6 +18,8 @@ import com.example.fingrow.data.users.User
 import com.example.fingrow.data.users.UserViewModel
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
+import com.example.fingrow.ui.mentor.MatchesActivity
+import com.example.fingrow.ui.mentor.SelectMentorActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity
 import kotlinx.coroutines.runBlocking
 import java.lang.IllegalArgumentException
@@ -180,14 +182,18 @@ class SignUpActivity : AppCompatActivity() {
             updateUiWithUser()
             setResult(Activity.RESULT_OK)
         } catch (e: Throwable) {
-            showSignUpFailed("Error signing up")
+            //showSignUpFailed("Error signing up")
+            showSignUpFailed(e.toString())
             setResult(Activity.RESULT_CANCELED)
         }
     }
 
     private fun updateUiWithUser() {
-        val intent = Intent(this, MainActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+        //val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, MatchesActivity::class.java)
+
+        //val intent = Intent(this, MainActivity::class.java)
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
         startActivity(intent)
 
         finish()

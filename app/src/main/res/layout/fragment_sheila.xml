@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/app_bg_gradient"
+    tools:context=".ui.mentor.caroline.CarolineFragment"
+
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/shelia_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/profile_icon"
+        android:src="@drawable/shelia"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/shelia_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/Shelia_Bates"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/senior_advisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevietnampro_medium"
+        android:text="@string/senior_advisor"
+        android:textColor="@color/darkest_grey"
+        android:layout_marginTop="10dp"
+        android:textSize="14sp"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/ffp_foundation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevietnampro_medium"
+        android:text="@string/ffp_foundation"
+        android:textColor="@color/darkest_grey"
+        android:textSize="14sp"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/linkedin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/linkedin"
+            android:contentDescription="@string/linkedin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ffp_foundation"
+            android:layout_marginRight="20dp"
+            />
+
+        <ImageButton
+            android:id="@+id/gmail"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center"
+            android:background="@drawable/gmail"
+            android:contentDescription="@string/gmail"
+
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/interestButton"
+            style="@style/MyMaterialButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:icon="@drawable/white_heart"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:iconSize="15dp"
+            android:insetTop="0dp"
+            android:textStyle="bold"
+            android:insetBottom="0dp"
+            android:padding="12dp"
+            android:text="@string/heart_interested"
+            android:textAllCaps="false"
+            android:textColor="@color/off_white"
+            android:textSize="14sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:cornerRadius="8dp"
+            app:rippleColor="@color/deep_blue" />
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/Experience"
+        app:tabIndicatorColor="@color/reliable_blue"
+        app:tabTextColor="@color/black"
+        android:backgroundTint="@color/transparent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:tabSelectedTextColor="@color/reliable_blue" />
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+</LinearLayout>

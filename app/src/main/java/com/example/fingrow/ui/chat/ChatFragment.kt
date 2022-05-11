@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.fingrow.R
 import com.example.fingrow.databinding.FragmentChatBinding
+import com.example.fingrow.ui.mentor.SelectMentorActivity
 
 class ChatFragment : Fragment() {
 
@@ -52,6 +53,11 @@ class ChatFragment : Fragment() {
 //            i.data = Uri.parse(url)
 //            startActivity(i)
             Toast.makeText(activity, "Meeting Link Not Available", Toast.LENGTH_SHORT).show();
+        }
+
+        binding.darrenCard.setOnClickListener {
+            val intent = Intent(activity, DarrenChatActivity::class.java)
+            startActivity(intent)
         }
 
         return root
