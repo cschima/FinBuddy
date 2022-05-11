@@ -122,51 +122,6 @@
                 android:textSize="14sp"
                 android:theme="@style/Widget.AppCompat.Button.Borderless"
                 app:rippleColor="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/MyMaterialButtonOutlineStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bevietnampro_regular"
-                android:insetTop="10dp"
-                android:insetBottom="10dp"
-                android:padding="14dp"
-                android:text="@string/not_sure_yet"
-                android:textAllCaps="false"
-                android:textColor="@color/like_black"
-                android:textSize="14sp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:rippleColor="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/MyMaterialButtonOutlineStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bevietnampro_regular"
-                android:insetTop="10dp"
-                android:insetBottom="10dp"
-                android:padding="14dp"
-                android:text="@string/not_sure_yet"
-                android:textAllCaps="false"
-                android:textColor="@color/like_black"
-                android:textSize="14sp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:rippleColor="@null" />
-
-            <com.google.android.material.button.MaterialButton
-                style="@style/MyMaterialButtonOutlineStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/bevietnampro_regular"
-                android:insetTop="10dp"
-                android:insetBottom="10dp"
-                android:padding="14dp"
-                android:text="@string/not_sure_yet"
-                android:textAllCaps="false"
-                android:textColor="@color/like_black"
-                android:textSize="14sp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:rippleColor="@null" />
         </com.example.fingrow.ui.CustomMaterialButtonToggleGroup>
     </LinearLayout>
 </ScrollView>

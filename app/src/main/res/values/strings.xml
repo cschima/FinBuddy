@@ -163,14 +163,14 @@
     <string name="dollar_value">$%1$s</string>
     <string name="slash_value">/%1$s</string>
     <string name="value_left">%1$s left!</string>
-    <string name="you_have">You have </string>
+    <string name="you_have">"You have "</string>
     <string name="left">left!</string>
-    <string name="try_to_save">Try to save </string>
+    <string name="try_to_save">"Try to save "</string>
     <string name="per">$ per</string>
     <string name="title">Title</string>
     <string name="slash">/</string>
     <string name="percent">%</string>
-    <string name="this_is_a">This is a </string>
+    <string name="this_is_a">"This is a "</string>
     <string name="flexible_deadline">flexible deadline!</string>
     <string name="dont_forget_to_keep_saving">Don\'t forget to keep saving!</string>
 
