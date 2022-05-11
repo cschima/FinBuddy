@@ -4,29 +4,31 @@
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_25">#40000000</color>
+    <color name="black_33">#55000000</color>
+    <color name="black_30">#4D000000</color>
 
     <!--App Colors-->
     <color name="deep_blue">#0F20EF</color>
     <color name="dark_blue">#0F2C57</color>
     <color name="mint">#62C7BC</color>
     <color name="darkest_grey">#484C51</color>
+    <color name="darkest_grey_50">#80484C51</color>
     <color name="orange">#E78C6F</color>
     <color name="red_orange">#E4716B</color>
     <color name="mustard">#D9A539</color>
     <color name="light_grey">#F7F8FA</color>
     <color name="slight_grey">#F3F3F3</color>
+    <color name="light_grey_50">#80F7F8FA</color>
     <color name="off_white">#F4F4F4</color>
     <color name="reliable_blue">#3D76E0</color>
     <color name="like_black">#161616</color>
     <color name="dark_grey">#96969B</color>
+    <color name="dark_grey_50">#8096969B</color>
+    <color name="dark_grey_60">#9A96969B</color>
     <color name="medium_grey">#C5CBD4</color>
+    <color name="medium_grey_50">#80C5CBD4</color>
     <color name="toothpaste">#93E1B8</color>
     <color name="electric_yellow">#F2F21F</color>
-
-    <!--Android Colors-->
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
 </resources>

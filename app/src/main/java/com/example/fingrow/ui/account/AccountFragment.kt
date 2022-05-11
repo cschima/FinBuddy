@@ -26,12 +26,27 @@ class AccountFragment : Fragment() {
     ): View {
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
 
+        binding.userNameText.text = requireActivity().getSharedPreferences(
+            "login",
+            AppCompatActivity.MODE_PRIVATE
+        )?.getString("name", "")
+
+        binding.startDateText.text = requireActivity().getSharedPreferences(
+            "login",
+            AppCompatActivity.MODE_PRIVATE
+        )?.getString("start_date", "")
+
         binding.logoutButton.setOnClickListener {
             val prefs: SharedPreferences = requireActivity().getSharedPreferences("login",
                 AppCompatActivity.MODE_PRIVATE
             )
             val editor = prefs.edit()
-            editor.remove("user")
+            editor.remove("name")
+            editor.remove("email")
+            editor.remove("start_date")
+            editor.remove("last_month_saved")
+            editor.remove("this_month_saved")
+            editor.remove("total_saved")
             editor.apply()
 
             val intent = Intent(activity, LandingActivity::class.java)

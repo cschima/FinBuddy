@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_blue"
+    android:gravity="center"
     android:orientation="vertical"
     android:paddingTop="60dp"
     android:paddingBottom="60dp"
-    android:gravity="center"
     tools:context=".ui.home.NewGoalActivity">
 
     <LinearLayout
@@ -27,9 +27,11 @@
                 android:background="@drawable/circular_icon_bg_mint"
                 android:contentDescription="@string/profile_icon"
                 android:src="@drawable/ic_check"
+                android:visibility="gone"
                 app:tint="@color/dark_blue" />
 
             <TextView
+                android:id="@+id/textStageOne"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignStart="@+id/checkedStageOne"
@@ -52,9 +54,9 @@
             android:id="@+id/divider"
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="@color/mint"
             android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:layout_marginEnd="10dp"
+            android:background="@color/mint" />
 
         <RelativeLayout
             android:layout_width="45dp"
@@ -67,17 +69,18 @@
                 android:background="@drawable/circular_icon_bg_mint"
                 android:contentDescription="@string/profile_icon"
                 android:src="@drawable/ic_check"
-                app:tint="@color/dark_blue"
-                android:visibility="gone"/>
-
+                android:visibility="gone"
+                app:tint="@color/dark_blue" />
 
             <TextView
+                android:id="@+id/textStageTwo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_alignStart="@+id/checkedStageTwo"
                 android:layout_alignTop="@+id/checkedStageTwo"
                 android:layout_alignEnd="@+id/checkedStageTwo"
                 android:layout_alignBottom="@+id/checkedStageTwo"
+                android:alpha=".5"
                 android:background="@drawable/circular_icon_bg_mint"
                 android:fontFamily="@font/bevietnampro_semibold"
                 android:gravity="center"
@@ -86,8 +89,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/dark_blue"
                 android:textSize="18sp"
-                android:visibility="visible"
-                android:alpha=".5"/>
+                android:visibility="visible" />
 
         </RelativeLayout>
     </LinearLayout>
@@ -96,17 +98,17 @@
         android:id="@+id/stageFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="40dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"/>
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1" />
 
     <ImageView
         android:id="@+id/nextStage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/circular_icon_bg_off_white"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/circular_icon_bg_white"
         android:contentDescription="@string/profile_icon"
         android:src="@drawable/ic_next"
         app:tint="@color/dark_blue" />

@@ -7,6 +7,7 @@
     android:orientation="vertical"
     android:paddingStart="20dp"
     android:paddingEnd="20dp"
+    android:paddingBottom="?attr/actionBarSize"
     tools:context=".ui.home.HomeFragment">
 
     <TextView
@@ -44,7 +45,7 @@
             android:id="@+id/progress"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:progress="50"
+            android:progress="0"
             android:rotation="-135"
             app:indicatorColor="@color/mint"
             app:indicatorInset="0dp"
@@ -90,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:fontFamily="@font/bevietnampro_regular"
-                android:text="@string/outof_0"
+                android:text="@string/out_of_0"
                 android:textColor="@color/darkest_grey"
                 android:textSize="12sp" />
 
@@ -172,9 +173,10 @@
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/savingGoalsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp">
+            android:layout_marginBottom="0dp">
 
             <TextView
                 android:id="@+id/text_goals"
@@ -198,19 +200,56 @@
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:padding="5dp"
+                android:paddingEnd="10dp"
                 android:stateListAnimator="@null"
                 android:text="@string/add_goal"
                 android:textAllCaps="false"
                 android:textColor="@color/dark_blue"
-                android:textSize="12sp"
+                android:textSize="14sp"
                 android:theme="@style/Widget.AppCompat.Button.Borderless"
-                app:backgroundTint="@color/transparent"
+                app:backgroundTint="@color/mint"
                 app:icon="@drawable/ic_plus"
-                app:iconPadding="5dp"
+                app:iconPadding="0dp"
                 app:iconSize="@dimen/add_icon_size"
                 app:iconTint="@color/dark_blue"
-                app:rippleColor="@color/medium_grey" />
+                app:rippleColor="@color/medium_grey"
+                tools:ignore="RtlSymmetry" />
         </LinearLayout>
 
+        <RelativeLayout
+            android:id="@+id/cardsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/newGoalsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/new_goals_will_appear_here"
+                android:fontFamily="@font/bevietnampro_bold"
+                android:textColor="@color/medium_grey"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabDots"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                app:tabBackground="@drawable/tab_selector2"
+                android:backgroundTint="@color/transparent"
+                app:tabRippleColor="@null"
+                app:tabIndicatorHeight="0dp"
+                android:layout_alignParentBottom="true"
+                android:minHeight="0dp"
+                android:layout_centerHorizontal="true"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tabDots"
+                android:layout_alignParentTop="true"/>
+        </RelativeLayout>
     </LinearLayout>
 </LinearLayout>

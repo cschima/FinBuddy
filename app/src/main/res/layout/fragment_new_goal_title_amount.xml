@@ -22,18 +22,22 @@
         android:text="@string/goal_title"
         android:textSize="16sp"
         android:textColor="@color/light_grey"
-        android:fontFamily="@font/bevietnampro_medium"
+        android:fontFamily="@font/bevietnampro_semibold"
         android:layout_marginTop="15dp"/>
 
     <EditText
+        android:id="@+id/titleEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/off_white"
         android:textSize="14sp"
         android:textColor="@color/light_grey"
-        android:fontFamily="@font/bevietnampro_semibold"
+        android:fontFamily="@font/bevietnampro_regular"
         android:inputType="textAutoComplete"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        android:hint="@string/my_new_goal"
+        android:textColorHint="@color/medium_grey"
+        android:autofillHints="@null"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,16 +45,22 @@
         android:text="@string/goal_amount"
         android:textSize="16sp"
         android:textColor="@color/light_grey"
-        android:fontFamily="@font/bevietnampro_medium"
+        android:fontFamily="@font/bevietnampro_semibold"
         android:layout_marginTop="30dp"/>
 
     <EditText
+        android:id="@+id/amountEdit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/off_white"
         android:textSize="14sp"
         android:textColor="@color/light_grey"
-        android:fontFamily="@font/bevietnampro_semibold"
-        android:inputType="number"
-        android:textAlignment="center"/>
+        android:fontFamily="@font/bevietnampro_regular"
+        android:textAlignment="center"
+        android:hint="@string/dollar_0"
+        android:textColorHint="@color/medium_grey"
+        android:autofillHints="@null"
+        android:imeActionLabel="Continue"
+        android:imeOptions="actionDone"
+        android:inputType="none"/>
 </LinearLayout>

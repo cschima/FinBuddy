@@ -47,7 +47,8 @@
             android:textSize="12sp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             app:backgroundTint="@color/transparent"
-            app:rippleColor="@color/medium_grey" />
+            app:rippleColor="@color/medium_grey"
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
     <ProgressBar

@@ -1,138 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/signup_login_activity_bg_bg"
+    android:fitsSystemWindows="true"
     tools:context=".ui.signup.SignUpActivity">
 
     <LinearLayout
         android:id="@+id/getStartedLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/signUpLayout"
+        android:layout_alignParentTop="true"
         android:layout_marginBottom="-20dp"
-        android:paddingLeft="35dp"
-        android:paddingRight="35dp"
-        android:gravity="center_vertical"
         android:background="@drawable/signup_login_bg_gradient"
-        android:orientation="vertical">
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="35dp">
 
         <TextView
             android:id="@+id/getStartedText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_semibold"
             android:paddingBottom="20dp"
             android:text="@string/get_started"
             android:textColor="@color/light_grey"
-            android:fontFamily="@font/bevietnampro_semibold"
             android:textSize="22sp" />
 
         <TextView
             android:id="@+id/joinOurCommunityText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_regular"
             android:text="@string/join_our_community"
             android:textColor="@color/light_grey"
-            android:textSize="18sp"
-            android:fontFamily="@font/bevietnampro_regular"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/signUpLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="35dp"
-        android:paddingRight="35dp"
-        android:paddingTop="35dp"
-        android:paddingBottom="60dp"
-        android:layout_marginBottom="-20dp"
-        android:gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/signup_login_content_bg"
-        android:orientation="vertical">
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="35dp">
 
         <TextView
             android:id="@+id/signUpText"
-            android:layout_gravity="start"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:layout_marginBottom="25dp"
+            android:fontFamily="@font/bevietnampro_semibold"
             android:text="@string/sign_up"
             android:textColor="@color/like_black"
-            android:fontFamily="@font/bevietnampro_semibold"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:layout_marginBottom="15dp"
+            android:autofillHints="name"
             android:background="@drawable/edit_text_bg"
 
-            android:selectAllOnFocus="true"
+            android:fontFamily="@font/bevietnampro_regular"
             android:hint="@string/name"
             android:inputType="textPersonName"
+            android:padding="16dp"
+            android:selectAllOnFocus="true"
 
             android:textColor="@color/like_black"
-            android:fontFamily="@font/bevietnampro_regular"
-            android:textSize="14sp"/>
+            android:textColorHint="@color/dark_grey"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:layout_marginBottom="15dp"
+            android:autofillHints="emailAddress"
             android:background="@drawable/edit_text_bg"
 
-            android:selectAllOnFocus="true"
+            android:fontFamily="@font/bevietnampro_regular"
             android:hint="@string/prompt_email"
             android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:selectAllOnFocus="true"
 
             android:textColor="@color/like_black"
-            android:fontFamily="@font/bevietnampro_regular"
-            android:textSize="14sp"/>
+            android:textColorHint="@color/dark_grey"
+            android:textSize="14sp" />
 
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
             android:layout_marginBottom="50dp"
+            android:autofillHints="password"
             android:background="@drawable/edit_text_bg"
 
-            android:selectAllOnFocus="true"
+            android:fontFamily="@font/bevietnampro_regular"
             android:hint="@string/prompt_password"
             android:imeActionLabel="Sign up"
             android:imeOptions="actionDone"
             android:inputType="textPassword"
+            android:padding="16dp"
+            android:selectAllOnFocus="true"
 
             android:textColor="@color/like_black"
-            android:fontFamily="@font/bevietnampro_regular"
-            android:textSize="14sp"/>
+            android:textColorHint="@color/dark_grey"
+            android:textSize="14sp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/nextButton"
+            style="@style/MyMaterialButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
-            android:padding="14dp"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
             android:enabled="false"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:insetTop="0dp"
 
-            android:theme="@style/Widget.AppCompat.Button.Borderless"
-            style="@style/MyMaterialButtonStyle"
+            android:insetBottom="0dp"
+            android:padding="14dp"
             android:stateListAnimator="@null"
             android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/light_grey"
             android:textSize="16sp"
-            android:fontFamily="@font/bevietnampro_semibold"
-            app:rippleColor="@color/deep_blue"
-            app:cornerRadius="8dp"/>
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:cornerRadius="8dp"
+            app:rippleColor="@color/deep_blue" />
 
         <LinearLayout
             android:id="@+id/haveAccountLayout"
@@ -145,29 +149,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/bevietnampro_regular"
                 android:text="@string/have_account"
                 android:textColor="@color/dark_grey"
-                android:fontFamily="@font/bevietnampro_regular"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/logInButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_semibold"
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 android:minWidth="0dp"
                 android:minHeight="0dp"
                 android:padding="5dp"
-                android:theme="@style/Widget.AppCompat.Button.Borderless"
                 android:stateListAnimator="@null"
                 android:text="@string/log_in"
                 android:textAllCaps="false"
                 android:textColor="@color/reliable_blue"
                 android:textSize="14sp"
-                android:fontFamily="@font/bevietnampro_semibold"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
                 app:backgroundTint="@color/transparent"
-                app:rippleColor="@color/medium_grey"/>
+                app:rippleColor="@color/medium_grey" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</RelativeLayout>
