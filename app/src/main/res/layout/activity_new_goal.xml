@@ -108,7 +108,7 @@
         android:id="@+id/nextStage"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:background="@drawable/circular_icon_bg_white"
+        android:background="@drawable/circular_icon_bg_white_border"
         android:contentDescription="@string/profile_icon"
         android:src="@drawable/ic_next"
         app:tint="@color/dark_blue" />
