@@ -7,8 +7,10 @@ import androidx.room.PrimaryKey
 data class Goal (
     @PrimaryKey(autoGenerate = true)
     val id: Int,
-    val userName: String,
-    val goalName: String,
-    val startDate: String,
-    val endDate: String
+    val user: String,
+    val title: String,
+    val total_amount: Double,
+    val start_date: String,
+    val end_date: String,
+    val current_amount: Double
 )

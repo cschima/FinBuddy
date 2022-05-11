@@ -10,12 +10,17 @@ import android.view.ViewTreeObserver
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.R
+import com.example.fingrow.data.goals.Goal
+import com.example.fingrow.data.goals.GoalViewModel
 import com.example.fingrow.databinding.FragmentHomeBinding
 import com.example.fingrow.ui.home.cards.CardPagerAdapter
 import com.example.fingrow.ui.home.cards.GoalCard
 import com.example.fingrow.ui.home.cards.ShadowTransformer
 import com.google.android.material.tabs.TabLayoutMediator
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class HomeFragment : Fragment() {
@@ -24,6 +29,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private lateinit var cardAdapter: CardPagerAdapter
+    private lateinit var goalViewModel: GoalViewModel
 
     private var adapterSetup = false
 
@@ -43,6 +49,8 @@ class HomeFragment : Fragment() {
 
         cardAdapter = CardPagerAdapter(requireContext(), binding.newGoalsTextView)
 
+        goalViewModel = ViewModelProvider(this)[GoalViewModel::class.java]
+
         val pref = requireActivity().getSharedPreferences("login", AppCompatActivity.MODE_PRIVATE)
         binding.textHome.text = getString(R.string.main_heading, pref.getString("name", ""))
         binding.overallSavings.text =
@@ -51,6 +59,8 @@ class HomeFragment : Fragment() {
             getString(R.string.dollar_value, pref.getString("last_month_saved", ""))
         binding.thisMonthSavings.text =
             getString(R.string.dollar_value, pref.getString("this_month_saved", ""))
+
+        loadGoals()
 
         val progressBack = binding.progressBack
         val progress = binding.progress
@@ -72,14 +82,65 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
+    private fun loadGoals() {
+        val email = requireActivity().getSharedPreferences(
+            "login",
+            AppCompatActivity.MODE_PRIVATE
+        ).getString("email", "")!!
+        if (goalViewModel.userGoalCount(email) == 0
+        ) {
+            return
+        }
+
+        val formatter = SimpleDateFormat.getDateInstance()
+
+        for (g in goalViewModel.getAllUserGoals(email)) {
+            val c = Calendar.getInstance()
+            c.time = formatter.parse(g.end_date)!!
+            cardAdapter.addCardItem(
+                GoalCard(
+                    g.title,
+                    g.total_amount,
+                    c.get(Calendar.MONTH) + 1,
+                    c.get(Calendar.YEAR),
+                    g.current_amount
+                )
+            )
+        }
+
+        setupCardAdapter()
+
+        binding.pager.adapter = cardAdapter
+        TabLayoutMediator(binding.tabDots, binding.pager) { _, _ -> }.attach()
+
+        binding.newGoalsTextView.text = ""
+    }
+
     private fun addGoal(data: Intent?) {
         if (data != null) {
             val title = data.getStringExtra("title")!!
-            val amount = data.getStringExtra("amount")!!.toInt()
+            val amount = data.getStringExtra("amount")!!.toDouble()
             val month = data.getStringExtra("month")!!.toInt()
             val year = data.getStringExtra("year")!!.toInt()
 
+            val startDate = Calendar.getInstance().time
+            val formatter = SimpleDateFormat.getDateInstance() //or use getDateTimeInstance()
+            val formattedDate = formatter.format(startDate)
+
+            val c = Calendar.getInstance()
+            c.set(year, month - 1, 1)
+            val formattedEndDate = formatter.format(c.time)
+
             cardAdapter.addCardItem(GoalCard(title, amount, month, year))
+            goalViewModel.addGoal(
+                Goal(
+                    0, requireActivity().getSharedPreferences(
+                        "login",
+                        AppCompatActivity.MODE_PRIVATE
+                    ).getString("email", "")!!,
+                    title, amount, formattedDate, formattedEndDate, 0.0
+                )
+            )
 
             if (!adapterSetup) {
                 setupCardAdapter()

@@ -3,13 +3,11 @@ package com.example.fingrow.ui.home.cards
 import java.util.*
 import kotlin.math.roundToInt
 
-class GoalCard(title: String, amount: Int, month: Int, year: Int) {
+class GoalCard(title: String, amount: Double, month: Int, year: Int, currAmount: Double = 0.0) {
     private val myTitle = title
-    private val startMonth = Calendar.getInstance().get(Calendar.MONTH) + 1
-    private val startYear = Calendar.getInstance().get(Calendar.YEAR)
     private val endMonth = month
     private val endYear = year
-    private val currentAmount = 0
+    private val currentAmount = currAmount
     private val totalAmount = amount
 
     fun getTitle(): String {
@@ -34,22 +32,22 @@ class GoalCard(title: String, amount: Int, month: Int, year: Int) {
         val amountNeeded: Double
         val formattedAmount: String
         if (monthsAway < 60) {
-            amountNeeded = (totalAmount - currentAmount).toDouble() / monthsAway
+            amountNeeded = (totalAmount - currentAmount) / monthsAway
             formattedAmount = String.format("%,.2f", amountNeeded)
             return "$formattedAmount per month"
         }
 
-        amountNeeded = (totalAmount - currentAmount).toDouble() / (monthsAway / 12)
+        amountNeeded = (totalAmount - currentAmount) / (monthsAway / 12)
         formattedAmount = String.format("%,.2f", amountNeeded)
         return "$formattedAmount per year"
     }
 
-    fun getCurrentAmount(): String = String.format("%,d", currentAmount)
+    fun getCurrentAmount(): String = String.format("%,.0f", currentAmount)
 
-    fun getTotalAmount(): String = String.format("%,d", totalAmount)
+    fun getTotalAmount(): String = String.format("%,.0f", totalAmount)
 
     fun getProgressPercent(): Int {
-        return (100 * (currentAmount.toDouble() / totalAmount.toDouble())).roundToInt()
+        return (100 * (currentAmount / totalAmount)).roundToInt()
     }
 
     private fun monthsAway(): Int {
