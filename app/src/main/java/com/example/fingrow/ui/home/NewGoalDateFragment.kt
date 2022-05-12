@@ -114,9 +114,9 @@ class NewGoalDateFragment : Fragment() {
             val valid = it ?: return@Observer
 
             if (valid) {
-                val moIndex = months.indexOf(mp.getCurrentItem())
-                val yearIndex = yp.getCurrentItem().toInt()
-                actData!!.putExtra("month", (moIndex + 1).toString())
+                val moIndex = if (binding.flexibleButton.isChecked) -1 else (months.indexOf(mp.getCurrentItem()) + 1)
+                val yearIndex = if (binding.flexibleButton.isChecked) -1 else yp.getCurrentItem().toInt()
+                actData!!.putExtra("month", (moIndex).toString())
                 actData!!.putExtra("year", yearIndex.toString())
                 newGoalViewModel.setData(actData!!)
             }

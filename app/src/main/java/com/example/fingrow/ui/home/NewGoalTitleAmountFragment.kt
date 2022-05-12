@@ -86,7 +86,7 @@ class NewGoalTitleAmountFragment : Fragment() {
 
             setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_DONE && isValid()) {
-                    (activity as NewGoalActivity).incrementStage()
+                    (activity as NewGoalActivity).incrementStage(1)
                 }
                 false
             }

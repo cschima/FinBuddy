@@ -223,7 +223,13 @@
     <string name="airbnb_time">May 2018 - Apr 2020 . 11 Month</string>
     <string name="google">Google</string>
     <string name="google_time">June 2017 - Apr 2018 . 10 Month</string>
-
+    <string name="shield">shield</string>
+    <string name="confirmed">Confirmed!</string>
+    <string name="your_next_steps_should_be_to_notify_your_mentor_so_they_can_assist_you_in_reaching_your_goals">Your next steps should be to notify your mentor so they can assist you in reaching your goals.</string>
+    <string name="title_colon">"Title: "</string>
+    <string name="amount_colon">"Amount: "</string>
+    <string name="end_date_colon">"End Date: "</string>
+    <string name="flexible">Flexible</string>
 
 
 </resources>
