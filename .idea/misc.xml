@@ -47,7 +47,7 @@
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_debt.xml" value="0.2546875" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_goal_types.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_income.xml" value="0.2" />
-        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.4036458333333333" />
+        <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_onboarding_why_fingrow.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_landing_view.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_second_onboarding.xml" value="0.1" />
         <entry key="..\:/Users/camde/AndroidStudioProjects/FinGrow/app/src/main/res/layout/fragment_third_landing_view.xml" value="0.17395833333333333" />
@@ -70,11 +70,13 @@
         <entry key="app/src/main/res/layout/activity_select_mentor.xml" value="0.29688415527343753" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/chat_row.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_account.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_carline.xml" value="0.38958333333333334" />
         <entry key="app/src/main/res/layout/fragment_caroline_experience.xml" value="0.4036458333333333" />
-        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.4149754842122396" />
         <entry key="app/src/main/res/layout/fragment_darren.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_documents.xml" value="0.4036458333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="app/src/main/res/layout/fragment_new_goal_title_amount.xml" value="0.4036458333333333" />
         <entry key="app/src/main/res/layout/fragment_onboarding_advice.xml" value="0.37222222222222223" />
         <entry key="app/src/main/res/layout/fragment_onboarding_debt.xml" value="0.37222222222222223" />
