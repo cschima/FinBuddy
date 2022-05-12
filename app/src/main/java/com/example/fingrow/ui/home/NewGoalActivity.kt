@@ -41,11 +41,11 @@ class NewGoalActivity : AppCompatActivity() {
             binding.textStageTwo.alpha = if (pos == 1) 0.5f else 1f
 
             binding.nextStage.setOnClickListener {
-                if (pos == 1) {
-                    incrementStage()
-                } else {
+                if (pos == 3) {
                     setResult(Activity.RESULT_OK, actData)
                     finish()
+                } else {
+                    incrementStage(pos)
                 }
             }
         })
@@ -57,9 +57,9 @@ class NewGoalActivity : AppCompatActivity() {
         })
     }
 
-    fun incrementStage() {
+    fun incrementStage(pos: Int) {
         supportFragmentManager.beginTransaction().apply {
-            replace(binding.stageFragment.id, NewGoalDateFragment())
+            replace(binding.stageFragment.id, if (pos == 1) NewGoalDateFragment() else NewGoalConfirmationFragment())
             addToBackStack(null)
             commit()
         }
