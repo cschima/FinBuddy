@@ -7,8 +7,7 @@
     android:orientation="vertical"
     tools:context=".ui.documents.DocumentsFragment"
     android:paddingStart="20dp"
-    android:paddingEnd="20dp"
-    android:paddingTop="?attr/actionBarSize">
+    android:paddingEnd="20dp">
 
 
     <LinearLayout
@@ -197,7 +196,7 @@
             android:id="@+id/floatingActionButton"
             android:layout_width="314dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
+            android:layout_gravity="bottom|end"
             android:backgroundTint="@color/reliable_blue"
             android:clickable="true"
             android:contentDescription="@string/plus_icon"

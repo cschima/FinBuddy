@@ -48,7 +48,7 @@
         <activity
             android:name=".ui.home.NewGoalActivity"
             android:exported="false"
-            android:label="@string/title_activity_new_goal"/>
+            android:label="@string/title_activity_new_goal" />
         <activity
             android:name=".ui.home.ExistingGoalActivity"
             android:exported="false"
@@ -66,8 +66,8 @@
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".ui.chat.DarrenChatActivity"
-            android:label="@string/Darren_chat_activity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="@string/Darren_chat_activity" />
     </application>
 
 </manifest>

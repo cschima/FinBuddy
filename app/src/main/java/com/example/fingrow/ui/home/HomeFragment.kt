@@ -177,10 +177,11 @@ class HomeFragment : Fragment() {
             TabLayoutMediator(binding.tabDots, binding.pager) { _, _ -> }.attach()
 
             binding.newGoalsTextView.text = ""
+
             binding.activeSavings.text =
-                getString(R.string.dollar_value, goalViewModel.getActiveSavings(email).toString())
+                getString(R.string.dollar_value, String.format("%,d", goalViewModel.getActiveSavings(email)))
             binding.activeGoal.text =
-                getString(R.string.slash_value, goalViewModel.getActiveTotal(email).toString())
+                getString(R.string.slash_value, String.format("$%,d", goalViewModel.getActiveTotal(email)))
         }
     }
 
