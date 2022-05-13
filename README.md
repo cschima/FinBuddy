@@ -80,6 +80,7 @@ Website: [fingrow.com](https://fingrow.wixsite.com/fingrow)
 
 ## Contributors:
 
+### Team Point A to B (2021-2022)
 Camden Schiman, cschima@uw.edu</br>
 Justin Ung, ungjus19@uw.edu</br>
 Quynh Doan, qdoan@uw.edu</br>
