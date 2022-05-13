@@ -30,10 +30,6 @@ class SheilaFragment : Fragment() {
     ): View {
         _binding = FragmentSheilaBinding.inflate(inflater, container, false)
 
-        binding.interestButton.setOnClickListener{
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
-        }
         tabLayout = binding.tabLayout
         viewPager2 = binding.viewPager
         adapter = CarolineAdapter(parentFragmentManager, lifecycle)

@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
 import com.example.fingrow.MainActivity
+import com.example.fingrow.R
 import com.example.fingrow.databinding.FragmentCarolineBinding
+import com.example.fingrow.ui.chat.ChatFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -28,11 +30,6 @@ class CarolineFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentCarolineBinding.inflate(inflater, container, false)
-
-        binding.interestButton.setOnClickListener{
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
-        }
 
         tabLayout = binding.tabLayout
         viewPager2 = binding.viewPager

@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.fingrow.databinding.FragmentAccountBinding
 import com.example.fingrow.ui.landing.LandingActivity
+import com.example.fingrow.ui.mentor.SelectMentorActivity
 
 class AccountFragment : Fragment() {
 
@@ -52,6 +53,11 @@ class AccountFragment : Fragment() {
             val intent = Intent(activity, LandingActivity::class.java)
             startActivity(intent)
             requireActivity().finish()
+        }
+
+        binding.mentorsButton.setOnClickListener{
+            val intent = Intent(activity, SelectMentorActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root

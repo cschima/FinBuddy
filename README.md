@@ -25,7 +25,7 @@ A pro-bono financial consulting app that matches users based on their personaliz
 - Document sharing
 
 
-## How to Contribute<hr>
+## How to Contribute
 
 ### Technologies
 - Android Studio (Kotlin)
@@ -73,9 +73,10 @@ A pro-bono financial consulting app that matches users based on their personaliz
 ## License
 MIT License: ```LICENSE.txt```
 
-## Contact Us <hr>
+## Contact Us
 
 General: fingrowuw@gmail.com</br>
+Website: [fingrow.com](https://fingrow.wixsite.com/fingrow)
 
 ## Contributors:
 

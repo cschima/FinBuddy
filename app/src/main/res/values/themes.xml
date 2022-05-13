@@ -38,4 +38,9 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
+    <style name="InterestedToggle" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/interested_toggle_backgroundtint</item>
+    </style>
+
 </resources>
