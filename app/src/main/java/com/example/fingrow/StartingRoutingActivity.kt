@@ -7,7 +7,6 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.data.users.UserViewModel
 import com.example.fingrow.ui.landing.LandingActivity
-import kotlinx.coroutines.runBlocking
 
 class StartingRoutingActivity : AppCompatActivity() {
     private lateinit var userViewModel: UserViewModel
@@ -33,8 +32,7 @@ class StartingRoutingActivity : AppCompatActivity() {
     private fun doWork() {
         val userEmail = getSharedPreferences("login", MODE_PRIVATE).getString("email", "")
         if (userEmail != null && userEmail != "") {
-            val user =
-                runBlocking { userViewModel.findUser(userEmail.lowercase()) }
+            val user = userViewModel.findUser(userEmail.lowercase())
 
             if (user == null) {
                 val intent = Intent(this, LandingActivity::class.java)

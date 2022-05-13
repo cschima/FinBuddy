@@ -44,7 +44,6 @@ class AccountFragment : Fragment() {
             editor.remove("name")
             editor.remove("email")
             editor.remove("start_date")
-            editor.remove("last_month_saved")
             editor.remove("this_month_saved")
             editor.remove("total_saved")
             editor.apply()

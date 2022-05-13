@@ -11,8 +11,16 @@ interface GoalDao {
     suspend fun addGoal(goal: Goal)
 
     @Transaction
-    @Query("SELECT COUNT(*) FROM goals_table where user = :email")
-    suspend fun userGoalCount(email: String): Int
+    @Query("SELECT COUNT(*) FROM goals_table WHERE user = :email AND active = 1")
+    suspend fun activeUserGoalCount(email: String): Int
+
+    @Transaction
+    @Query("SELECT SUM(current_amount) FROM goals_table WHERE user = :email AND active = 1")
+    suspend fun getActiveSavings(email: String): Int
+
+    @Transaction
+    @Query("SELECT SUM(total_amount) FROM goals_table WHERE user = :email AND active = 1")
+    suspend fun getActiveTotal(email: String): Int
 
     @Transaction
     @Query("SELECT * FROM goals_table WHERE id = :id")
@@ -26,8 +34,8 @@ interface GoalDao {
     fun readAllGoalData(): LiveData<List<Goal>>
 
     @Transaction
-    @Query("SELECT * FROM goals_table WHERE user = :email ORDER BY id ASC")
-    suspend fun getAllUserGoals(email: String): List<Goal>
+    @Query("SELECT * FROM goals_table WHERE user = :email AND active = 1 ORDER BY id ASC")
+    suspend fun getAllActiveUserGoals(email: String): List<Goal>
 
     @Update
     suspend fun updateGoal(goal: Goal)

@@ -1,5 +1,6 @@
 package com.example.fingrow.ui.home.cards
 
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
 
@@ -42,12 +43,18 @@ class GoalCard(title: String, amount: Double, month: Int, year: Int, currAmount:
         return "$formattedAmount per year"
     }
 
-    fun getCurrentAmount(): String = String.format("%,.0f", currentAmount)
+    fun getCurrentAmount(): String = String.format("%,d", currentAmount.roundToInt())
 
-    fun getTotalAmount(): String = String.format("%,.0f", totalAmount)
+    fun getTotalAmount(): String = String.format("%,d", totalAmount.roundToInt())
 
     fun getProgressPercent(): Int {
         return (100 * (currentAmount / totalAmount)).roundToInt()
+    }
+
+    fun getEndDate(): String {
+        val c = Calendar.getInstance()
+        c.set(endYear, endMonth - 1, 1)
+        return SimpleDateFormat.getDateInstance().format(c.time)
     }
 
     private fun monthsAway(): Int {

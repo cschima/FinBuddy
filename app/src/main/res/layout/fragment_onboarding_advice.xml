@@ -40,7 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:selectionRequired="true"
             app:singleSelection="false">
 
             <com.google.android.material.button.MaterialButton

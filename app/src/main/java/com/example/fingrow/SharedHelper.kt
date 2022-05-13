@@ -60,14 +60,12 @@ class SharedHelper(val activity: AppCompatActivity) {
                 "/" + Calendar.getInstance().get(Calendar.YEAR).toString()
         if (user.last_month_updated != currMonthYear) {
             val newUser = User(
-                user.id,
-                user.name,
                 user.email,
+                user.name,
                 user.password,
                 user.start_date,
                 user.total_saved,
-                user.this_month_saved,
-                0,
+                0.0,
                 currMonthYear
             )
             ViewModelProvider(activity)[UserViewModel::class.java].updateUser(newUser)
@@ -77,8 +75,8 @@ class SharedHelper(val activity: AppCompatActivity) {
             AppCompatActivity.MODE_PRIVATE
         )
         val editor = prefs.edit()
-        editor.putString("last_month_saved", user.last_month_saved.toString())
         editor.putString("this_month_saved", user.this_month_saved.toString())
+        editor.putString("total_saved", user.total_saved.toString())
         editor.apply()
     }
 }

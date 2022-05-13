@@ -12,14 +12,12 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.example.fingrow.MainActivity
 import com.example.fingrow.SharedHelper
 import com.example.fingrow.data.users.User
 import com.example.fingrow.data.users.UserViewModel
 import com.example.fingrow.databinding.ActivitySignUpBinding
 import com.example.fingrow.ui.login.LoginActivity
 import com.example.fingrow.ui.mentor.MatchesActivity
-import com.example.fingrow.ui.mentor.SelectMentorActivity
 import com.example.fingrow.ui.onboarding.OnboardingActivity
 import kotlinx.coroutines.runBlocking
 import java.lang.IllegalArgumentException
@@ -151,14 +149,12 @@ class SignUpActivity : AppCompatActivity() {
             val formatter = SimpleDateFormat.getDateInstance() //or use getDateTimeInstance()
             val formattedDate = formatter.format(startDate)
             val user = User(
-                0,
-                name,
                 email.lowercase(),
+                name,
                 sharedHelper.hashPassword(password),
                 formattedDate,
-                0,
-                0,
-                0,
+                0.0,
+                0.0,
                 (Calendar.getInstance().get(Calendar.MONTH) + 1).toString() +
                         "/" + Calendar.getInstance().get(Calendar.YEAR).toString()
             )
@@ -175,7 +171,6 @@ class SignUpActivity : AppCompatActivity() {
             editor.putString("email", email)
             editor.putString("start_date", formattedDate)
             editor.putString("total_saved", "0")
-            editor.putString("last_month_saved", "0")
             editor.putString("this_month_saved", "0")
             editor.apply()
 

@@ -44,6 +44,7 @@ class OnboardingActivity : AppCompatActivity() {
                 // TODO clear selections
                 if (pos < fragments.size) {
                     swapFrag(fragments[pos])
+                    (fragments[pos - 1] as AbstractOnboardingFragment).clearSelections()
                 }
                 else {
                     // TODO attach info

@@ -53,7 +53,10 @@
             android:stepSize="5"
             android:valueFrom="5"
             android:valueTo="120"
-            app:labelBehavior="gone" />
+            app:labelBehavior="gone"
+            app:thumbColor="@color/reliable_blue"
+            app:tickVisible="false"
+            app:trackColorActive="@color/reliable_blue" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/bevietnampro_regular"
-                android:text="@string/above_120k"
+                android:text="@string/over_120k"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/like_black"
                 android:textSize="12sp" />

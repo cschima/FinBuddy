@@ -19,8 +19,10 @@ import com.example.fingrow.ui.home.cards.CardPagerAdapter
 import com.example.fingrow.ui.home.cards.GoalCard
 import com.example.fingrow.ui.home.cards.ShadowTransformer
 import com.google.android.material.tabs.TabLayoutMediator
+import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.roundToInt
 
 
 class HomeFragment : Fragment() {
@@ -47,18 +49,31 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        cardAdapter = CardPagerAdapter(requireContext(), binding.newGoalsTextView)
+        cardAdapter = CardPagerAdapter(requireContext(), this, binding.newGoalsTextView)
+        adapterSetup = false
 
         goalViewModel = ViewModelProvider(this)[GoalViewModel::class.java]
 
+        val email = requireActivity().getSharedPreferences(
+            "login",
+            AppCompatActivity.MODE_PRIVATE
+        ).getString("email", "")!!
         val pref = requireActivity().getSharedPreferences("login", AppCompatActivity.MODE_PRIVATE)
         binding.textHome.text = getString(R.string.main_heading, pref.getString("name", ""))
-        binding.overallSavings.text =
-            getString(R.string.dollar_value, pref.getString("total_saved", ""))
-        binding.lastMonthSavings.text =
-            getString(R.string.dollar_value, pref.getString("last_month_saved", ""))
-        binding.thisMonthSavings.text =
-            getString(R.string.dollar_value, pref.getString("this_month_saved", ""))
+
+        val total = NumberFormat.getCurrencyInstance()
+            .format((pref.getString("total_saved", "")!!.toDouble()))
+        binding.overallSavings.text = total.substring(0, total.length - 3)
+
+        val thisMonth = NumberFormat.getCurrencyInstance()
+            .format((pref.getString("this_month_saved", "")!!.toDouble()))
+        binding.thisMonthSavings.text = thisMonth.substring(0, thisMonth.length - 3)
+
+        val activeGoals = goalViewModel.activeUserGoalCount(email)
+        binding.activeSavings.text = if (activeGoals == 0) "$0" else
+            getString(R.string.dollar_value, String.format("%,d", goalViewModel.getActiveSavings(email)))
+        binding.activeGoal.text = if (activeGoals == 0) "/0" else
+            getString(R.string.slash_value, String.format("$%,d", goalViewModel.getActiveTotal(email)))
 
         loadGoals()
 
@@ -87,28 +102,36 @@ class HomeFragment : Fragment() {
             "login",
             AppCompatActivity.MODE_PRIVATE
         ).getString("email", "")!!
-        if (goalViewModel.userGoalCount(email) == 0
+        if (goalViewModel.activeUserGoalCount(email) == 0
         ) {
             return
         }
 
         val formatter = SimpleDateFormat.getDateInstance()
 
-        for (g in goalViewModel.getAllUserGoals(email)) {
-            val c = Calendar.getInstance()
-            c.time = formatter.parse(g.end_date)!!
+        for (g in goalViewModel.getAllActiveUserGoals(email)) {
+            var gMonth = -1
+            var gYear = -1
+            if (g.end_date != "") {
+                val c = Calendar.getInstance()
+                c.time = formatter.parse(g.end_date)!!
+                gMonth = c.get(Calendar.MONTH) + 1
+                gYear = c.get(Calendar.YEAR)
+            }
             cardAdapter.addCardItem(
                 GoalCard(
                     g.title,
                     g.total_amount,
-                    c.get(Calendar.MONTH) + 1,
-                    c.get(Calendar.YEAR),
+                    gMonth,
+                    gYear,
                     g.current_amount
                 )
             )
         }
 
-        setupCardAdapter()
+        if (!adapterSetup) {
+            setupCardAdapter()
+        }
 
         binding.pager.adapter = cardAdapter
         TabLayoutMediator(binding.tabDots, binding.pager) { _, _ -> }.attach()
@@ -127,18 +150,22 @@ class HomeFragment : Fragment() {
             val formatter = SimpleDateFormat.getDateInstance() //or use getDateTimeInstance()
             val formattedDate = formatter.format(startDate)
 
-            val c = Calendar.getInstance()
-            c.set(year, month - 1, 1)
-            val formattedEndDate = formatter.format(c.time)
+            var formattedEndDate = ""
+            if (month != -1 && year != -1) {
+                val c = Calendar.getInstance()
+                c.set(year, month - 1, 1)
+                formattedEndDate = formatter.format(c.time)
+            }
 
+            val email = requireActivity().getSharedPreferences(
+                "login",
+                AppCompatActivity.MODE_PRIVATE
+            ).getString("email", "")!!
             cardAdapter.addCardItem(GoalCard(title, amount, month, year))
             goalViewModel.addGoal(
                 Goal(
-                    0, requireActivity().getSharedPreferences(
-                        "login",
-                        AppCompatActivity.MODE_PRIVATE
-                    ).getString("email", "")!!,
-                    title, amount, formattedDate, formattedEndDate, 0.0
+                    0, email,
+                    title, amount, formattedDate, formattedEndDate, 0.0, true
                 )
             )
 
@@ -150,6 +177,10 @@ class HomeFragment : Fragment() {
             TabLayoutMediator(binding.tabDots, binding.pager) { _, _ -> }.attach()
 
             binding.newGoalsTextView.text = ""
+            binding.activeSavings.text =
+                getString(R.string.dollar_value, goalViewModel.getActiveSavings(email).toString())
+            binding.activeGoal.text =
+                getString(R.string.slash_value, goalViewModel.getActiveTotal(email).toString())
         }
     }
 

@@ -76,7 +76,7 @@
                 app:tint="@color/reliable_blue" />
 
             <TextView
-                android:id="@+id/thisMonthSavings"
+                android:id="@+id/activeSavings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -86,7 +86,7 @@
                 android:textSize="22sp" />
 
             <TextView
-                android:id="@+id/thisMonthGoal"
+                android:id="@+id/activeGoal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
@@ -99,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bevietnampro_medium"
-                android:text="@string/this_month"
+                android:text="@string/active_goals"
                 android:textColor="@color/like_black"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -114,7 +114,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/lastMonthSavings"
+                android:id="@+id/thisMonthSavings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bevietnampro_semibold"
@@ -123,11 +123,11 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/lastMonthText"
+                android:id="@+id/thisMonthText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bevietnampro_regular"
-                android:text="@string/last_month"
+                android:text="@string/this_month"
                 android:textColor="@color/darkest_grey"
                 android:textSize="12sp" />
 

@@ -12,5 +12,6 @@ data class Goal (
     val total_amount: Double,
     val start_date: String,
     val end_date: String,
-    val current_amount: Double
+    val current_amount: Double,
+    val active: Boolean
 )

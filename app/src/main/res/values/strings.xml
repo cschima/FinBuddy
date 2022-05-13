@@ -110,6 +110,7 @@
     <string name="goal_title">Goal Title</string>
     <string name="goal_amount">Goal Amount</string>
     <string name="title_activity_new_goal">NewGoalActivity</string>
+    <string name="title_activity_existing_goal">ExistingGoalActivity</string>
     <string name="what_brings_you_to_fingrow">What brings you to FinGrow?</string>
     <string name="select_your_financial_priorities_below_so_we_can_help_personalize_your_experience">Select your financial priorities below so we can help personalize your experience!</string>
     <string name="manage_my_financial_plan_or_budget">Manage my financial plan or budget</string>
@@ -142,7 +143,7 @@
     <string name="log_out">Log Out</string>
     <string name="not_sure_yet">Not sure yet</string>
     <string name="under_5k">Under $5K</string>
-    <string name="above_120k">Above $120K</string>
+    <string name="over_120k">Over $120K</string>
     <string name="what_financial_goals_are_you_hoping_to_achieve">What financial goals are you hoping to achieve?</string>
     <string name="goal_types_help">Short-term goals usually help you buy an item on short notice (ex: new phone, new furniture, etc.)\n\nMid-term goals usually help you pay for an event or special day in the somewhat near future (wedding, graduation, etc.)\n\nLong-term goals usually help you plan for situations in the distant future (retirement, paying for children\'s college, etc.)</string>
     <string name="short_term">Short-term</string>
@@ -180,7 +181,6 @@
     <string name="this_is_a">"This is a "</string>
     <string name="flexible_deadline">flexible deadline!</string>
     <string name="dont_forget_to_keep_saving">Don\'t forget to keep saving!</string>
-
 
 
     <!--Your advisor matches-->
@@ -230,6 +230,16 @@
     <string name="amount_colon">"Amount: "</string>
     <string name="end_date_colon">"End Date: "</string>
     <string name="flexible">Flexible</string>
+    <string name="total_saved">Total Saved</string>
+    <string name="calendar">calendar</string>
+    <string name="withdraw_funds">Withdraw funds</string>
+    <string name="add_funds">Add funds</string>
+    <string name="four_diamonds">four diamonds</string>
+    <string name="end_date">End Date</string>
+    <string name="progress">Progress</string>
+    <string name="based_on_your_current_progress">Based on your current progress, you will achieve this goal if you save $%1$s. Keep up the good work!\n</string>
+    <string name="this_is_a_keep_up">"This is a flexible goal. Don\'t forget to keep saving. Keep up the good work!\n"</string>
+    <string name="active_goals">Active goals</string>
 
 
 </resources>
