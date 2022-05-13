@@ -41,7 +41,7 @@ class SelectMentorActivity: AppCompatActivity() {
                     tab.text = "Shelia"
                 }
                 1 -> {
-                    tab.text = "Carline"
+                    tab.text = "Caroline"
                 }
                 2 -> {
                     tab.text = "Darren"

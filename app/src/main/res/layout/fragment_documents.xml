@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context=".ui.documents.DocumentsFragment"
     android:paddingStart="20dp"
-    android:paddingEnd="20dp">
+    android:paddingEnd="20dp"
+    android:paddingTop="?attr/actionBarSize">
 
 
     <LinearLayout

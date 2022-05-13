@@ -6,15 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/dark_blue"
     android:gravity="center"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:paddingTop="60dp"
+
     android:paddingBottom="60dp"
     tools:context=".ui.home.NewGoalActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:paddingTop="60dp">
 
         <RelativeLayout
             android:layout_width="45dp"
@@ -108,6 +110,7 @@
         android:id="@+id/nextStage"
         android:layout_width="70dp"
         android:layout_height="70dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/circular_icon_bg_white_border"
         android:contentDescription="@string/profile_icon"
         android:src="@drawable/ic_next"

@@ -199,10 +199,10 @@
     <!--Select mentor-->
     <string name="select_mentor_activity">SelectMentorActivity</string>
     <string name="Experience">Experience</string>
-
-    <string name="linkedin">linkedin</string>
+    <string name="linkedin">LinkedIn</string>
     <string name="gmail">gmail</string>
     <string name="heart_interested">I\'m interested</string>
+    <string name="done">Done</string>
 
     <!--Shelia Bates-->
     <string name="senior_advisor">Senior Advisor | Risk Management</string>
