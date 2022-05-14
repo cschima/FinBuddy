@@ -103,12 +103,12 @@
             android:id="@+id/takeYourTime"
             android:layout_width="375dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/bevietnampro_medium"
             android:text="@string/take_your_time"
             android:textColor="@color/darkest_grey"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imInterested" />
 
@@ -139,12 +139,12 @@
             android:id="@+id/onceYou"
             android:layout_width="375dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/bevietnampro_medium"
             android:text="@string/once_you"
             android:textColor="@color/darkest_grey"
             android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tab" />
 
@@ -190,6 +190,7 @@
             android:text="@string/my_profile"
             android:textColor="@color/reliable_blue"
             android:textSize="14sp"
+            app:layout_constraintHorizontal_bias="0.512"
             app:layout_constraintStart_toEndOf="@+id/ofThem"
             app:layout_constraintTop_toBottomOf="@+id/onceYou" />
 
