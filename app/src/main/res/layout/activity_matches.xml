@@ -101,8 +101,9 @@
 
         <TextView
             android:id="@+id/takeYourTime"
-            android:layout_width="375dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/bevietnampro_medium"
             android:text="@string/take_your_time"
@@ -137,14 +138,14 @@
 
         <TextView
             android:id="@+id/onceYou"
-            android:layout_width="375dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/bevietnampro_medium"
             android:text="@string/once_you"
             android:textColor="@color/darkest_grey"
             android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tab" />
 
