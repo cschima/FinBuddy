@@ -84,7 +84,7 @@
         android:text="@string/next"
         android:textAllCaps="false"
         android:textColor="@color/off_white"
-        android:textSize="16sp"
+        android:textSize="14sp"
         android:theme="@style/Widget.AppCompat.Button.Borderless"
         app:cornerRadius="8dp"
         app:rippleColor="@color/deep_blue" />
