@@ -22,7 +22,7 @@ interface UserDao {
     fun delete(user: User)
 
     @Transaction
-    @Query("SELECT * FROM users_table ORDER BY id ASC")
+    @Query("SELECT * FROM users_table")
     fun readAllUserData(): LiveData<List<User>>
 
     @Update

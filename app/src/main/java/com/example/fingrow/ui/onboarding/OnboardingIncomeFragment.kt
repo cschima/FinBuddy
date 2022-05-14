@@ -9,13 +9,12 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import android.widget.ArrayAdapter
 import android.widget.ScrollView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.R
 import com.example.fingrow.databinding.FragmentOnboardingIncomeBinding
 
 
-class OnboardingIncomeFragment : Fragment() {
+class OnboardingIncomeFragment : AbstractOnboardingFragment() {
     object Constants {
         const val MY_POS = 3
     }
@@ -60,7 +59,7 @@ class OnboardingIncomeFragment : Fragment() {
 
         binding.autoCompleteTextView.addTextChangedListener(object : TextWatcher {
             override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                onboardingViewModel.setValid(true)
+                onboardingViewModel.setValid(s.toString() != "")
             }
             override fun beforeTextChanged(s: CharSequence, start: Int, count: Int, after: Int) {}
             override fun afterTextChanged(s: Editable) {}
@@ -79,5 +78,10 @@ class OnboardingIncomeFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun clearSelections() {
+        _binding?.slider?.value = 5F
+        _binding?.autoCompleteTextView?.setText("")
     }
 }

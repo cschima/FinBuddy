@@ -36,9 +36,28 @@ class NewGoalActivity : AppCompatActivity() {
         newGoalViewModel.pos.observe(this, Observer {
             val pos = it ?: return@Observer
 
-            binding.textStageOne.visibility = if (pos == 1) View.VISIBLE else View.GONE
-            binding.checkedStageOne.visibility = if (pos == 1) View.GONE else View.VISIBLE
-            binding.textStageTwo.alpha = if (pos == 1) 0.5f else 1f
+            when (pos) {
+                1 -> {
+                    binding.textStageOne.visibility = View.VISIBLE
+                    binding.checkedStageOne.visibility = View.GONE
+                    binding.textStageTwo.visibility = View.VISIBLE
+                    binding.checkedStageTwo.visibility = View.GONE
+                    binding.textStageTwo.alpha = .5F
+                }
+                2 -> {
+                    binding.textStageOne.visibility = View.GONE
+                    binding.checkedStageOne.visibility = View.VISIBLE
+                    binding.textStageTwo.visibility = View.VISIBLE
+                    binding.checkedStageTwo.visibility = View.GONE
+                    binding.textStageTwo.alpha = 1F
+                }
+                else -> {
+                    binding.textStageOne.visibility = View.GONE
+                    binding.checkedStageOne.visibility = View.VISIBLE
+                    binding.textStageTwo.visibility = View.GONE
+                    binding.checkedStageTwo.visibility = View.VISIBLE
+                }
+            }
 
             binding.nextStage.setOnClickListener {
                 if (pos == 3) {

@@ -1,7 +1,6 @@
 package com.example.fingrow.ui.onboarding
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +9,7 @@ import android.widget.ScrollView
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.databinding.FragmentOnboardingGoalTypesBinding
 
-class OnboardingGoalTypesFragment : Fragment() {
+class OnboardingGoalTypesFragment : AbstractOnboardingFragment() {
 
     object Constants {
         const val MY_POS = 2
@@ -53,5 +52,12 @@ class OnboardingGoalTypesFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun clearSelections() {
+        _binding?.firstOption?.isChecked = false
+        _binding?.secondOption?.isChecked = false
+        _binding?.thirdOption?.isChecked = false
+        _binding?.fourthOption?.isChecked = false
     }
 }

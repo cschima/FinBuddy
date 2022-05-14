@@ -6,12 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import android.widget.ScrollView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.fingrow.databinding.FragmentOnboardingWhyFingrowBinding
 
 
-class OnboardingWhyFingrowFragment : Fragment() {
+class OnboardingWhyFingrowFragment : AbstractOnboardingFragment() {
 
     object Constants {
         const val MY_POS = 1
@@ -53,5 +52,13 @@ class OnboardingWhyFingrowFragment : Fragment() {
         })
 
         return binding.root
+    }
+
+    override fun clearSelections() {
+        _binding?.firstOption?.isChecked = false
+        _binding?.secondOption?.isChecked = false
+        _binding?.thirdOption?.isChecked = false
+        _binding?.fourthOption?.isChecked = false
+        _binding?.fifthOption?.isChecked = false
     }
 }

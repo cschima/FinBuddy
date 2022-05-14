@@ -26,15 +26,27 @@ class GoalViewModel(application: Application): AndroidViewModel(application) {
         return success
     }
 
-    fun getAllUserGoals(email: String): List<Goal> {
+    fun getAllActiveUserGoals(email: String): List<Goal> {
         return runBlocking {
-            repository.getAllUserGoals(email)
+            repository.getAllActiveUserGoals(email)
         }
     }
 
-    fun userGoalCount(email: String): Int {
+    fun activeUserGoalCount(email: String): Int {
         return runBlocking {
-            repository.userGoalCount(email)
+            repository.activeUserGoalCount(email)
+        }
+    }
+
+    fun getActiveSavings(email: String): Int {
+        return runBlocking {
+            repository.getActiveSavings(email)
+        }
+    }
+
+    fun getActiveTotal(email: String): Int {
+        return runBlocking {
+            repository.getActiveTotal(email)
         }
     }
 

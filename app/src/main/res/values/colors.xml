@@ -28,6 +28,7 @@
     <color name="dark_grey_50">#8096969B</color>
     <color name="dark_grey_60">#9A96969B</color>
     <color name="medium_grey">#C5CBD4</color>
+    <color name="medium_grey_20">#33C5CBD4</color>
     <color name="medium_grey_50">#80C5CBD4</color>
     <color name="toothpaste">#93E1B8</color>
     <color name="electric_yellow">#F2F21F</color>

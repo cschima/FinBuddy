@@ -16,12 +16,20 @@ class GoalRepository(private val goalDao: GoalDao) {
         return true
     }
 
-    suspend fun getAllUserGoals(email: String): List<Goal> {
-        return goalDao.getAllUserGoals(email)
+    suspend fun getAllActiveUserGoals(email: String): List<Goal> {
+        return goalDao.getAllActiveUserGoals(email)
     }
 
-    suspend fun userGoalCount(email: String): Int {
-        return goalDao.userGoalCount(email)
+    suspend fun activeUserGoalCount(email: String): Int {
+        return goalDao.activeUserGoalCount(email)
+    }
+
+    suspend fun getActiveSavings(email: String): Int {
+        return goalDao.getActiveSavings(email)
+    }
+
+    suspend fun getActiveTotal(email: String): Int {
+        return goalDao.getActiveTotal(email)
     }
 
     suspend fun findGoal(id: Int): Goal? {
