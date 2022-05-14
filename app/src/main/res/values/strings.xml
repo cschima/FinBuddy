@@ -192,8 +192,8 @@
     <string name="my_profile">My Profile\t</string>
     <string name="tab">tab.</string>
     <string name="once_you">Once you\'ve get to know them enough, you\'ll get to</string>
-    <string name="request">request\t</string>
-    <string name="word_one">one\t</string>
+    <string name="request">request</string>
+    <string name="word_one">\tone\t</string>
     <string name="of_them_as">of them as your mentor via\t</string>
 
     <!--Select mentor-->
