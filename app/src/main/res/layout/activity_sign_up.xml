@@ -128,12 +128,12 @@
             android:insetTop="0dp"
 
             android:insetBottom="0dp"
-            android:padding="14dp"
+            android:padding="12dp"
             android:stateListAnimator="@null"
             android:text="@string/next"
             android:textAllCaps="false"
             android:textColor="@color/light_grey"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             app:cornerRadius="8dp"
             app:rippleColor="@color/deep_blue" />
