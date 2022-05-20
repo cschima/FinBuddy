@@ -1,22 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".ui.account.AccountFragment">
 
     <TextView
         android:id="@+id/text_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bevietnampro_bold"
+        android:paddingBottom="32dp"
+        android:text="@string/profile"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:gravity="center_vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/circular_icon_bg_white"
+            android:contentDescription="@string/profile_icon"
+            android:src="@drawable/ic_profile"
+            app:tint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_bold"
+                android:includeFontPadding="false"
+                android:paddingBottom="6dp"
+                android:text="@string/user_name"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/startDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:includeFontPadding="false"
+                android:text="@string/start_date"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/medium_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/myInformationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:includeFontPadding="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="21dp"
+            android:paddingBottom="21dp"
+            android:stateListAnimator="@null"
+            android:text="@string/my_information"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/darkest_grey"
+            android:textSize="14sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:backgroundTint="@color/transparent"
+            app:icon="@drawable/ic_profile_circle"
+            app:iconPadding="20dp"
+            app:iconSize="@dimen/settings_icons_sizes"
+            app:iconTint="@color/darkest_grey"
+            app:rippleColor="@color/medium_grey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mentorsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:includeFontPadding="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="21dp"
+            android:paddingBottom="21dp"
+            android:stateListAnimator="@null"
+            android:text="@string/mentors"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/darkest_grey"
+            android:textSize="14sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:backgroundTint="@color/transparent"
+            app:icon="@drawable/ic_people"
+            app:iconPadding="20dp"
+            app:iconSize="@dimen/settings_icons_sizes"
+            app:iconTint="@color/darkest_grey"
+            app:rippleColor="@color/medium_grey" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:includeFontPadding="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="21dp"
+            android:paddingBottom="21dp"
+            android:stateListAnimator="@null"
+            android:text="@string/log_out"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/darkest_grey"
+            android:textSize="14sp"
+            android:theme="@style/Widget.AppCompat.Button.Borderless"
+            app:backgroundTint="@color/transparent"
+            app:icon="@drawable/ic_logout"
+            app:iconPadding="20dp"
+            app:iconSize="@dimen/settings_icons_sizes"
+            app:iconTint="@color/darkest_grey"
+            app:rippleColor="@color/medium_grey" />
+    </LinearLayout>
+</LinearLayout>

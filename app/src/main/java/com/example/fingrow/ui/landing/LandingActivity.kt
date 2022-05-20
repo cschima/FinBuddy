@@ -22,9 +22,9 @@ class LandingActivity : AppCompatActivity() {
 
         val pager: ViewPager2 = binding.pager
         val fragments: ArrayList<Fragment> = arrayListOf(
-            FirstLandingFragment(),
-            SecondLandingFragment(),
-            ThirdLandingFragment()
+            LandingWalletFragment(),
+            LandingCalendarFragment(),
+            LandingNotepadFragment()
         )
         val adapter = ViewPagerAdapter(fragments, this)
         pager.adapter = adapter

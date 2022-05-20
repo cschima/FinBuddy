@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingTop="16dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/youHaveTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_medium"
+                android:text="@string/you_have"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeLeftTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/left"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/youHaveTextView"
+                app:layout_constraintTop_toTopOf="@id/youHaveTextView"
+                app:layout_constraintTop_toBottomOf="@id/youHaveTextView" />
+
+            <TextView
+                android:id="@+id/tryToSaveTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_medium"
+                android:text="@string/try_to_save"
+                android:textColor="@color/dark_grey"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/youHaveTextView" />
+
+            <TextView
+                android:id="@+id/savingAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/per"
+                android:textColor="@color/dark_blue"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/tryToSaveTextView"
+                app:layout_constraintTop_toTopOf="@id/tryToSaveTextView"
+                app:layout_constraintBottom_toBottomOf="@id/tryToSaveTextView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/reliable_blue"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_medium"
+                android:paddingBottom="10dp"
+                android:text="@string/title"
+                android:textColor="@color/light_grey"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_bold"
+                android:text="@string/dollar_sign"
+                android:textColor="@color/light_grey"
+                android:textSize="22sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+            <TextView
+                android:id="@+id/totalAmountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha=".8"
+                android:fontFamily="@font/bevietnampro_semibold"
+                android:text="@string/slash"
+                android:textColor="@color/light_grey"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/currentAmountTextView"
+                app:layout_constraintStart_toEndOf="@id/currentAmountTextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ProgressBar
+                    android:id="@+id/progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="5dp"
+                    android:layout_weight="1"
+                    android:progress="50"
+                    android:progressBackgroundTint="@color/light_grey_50"
+                    android:progressTint="@color/light_grey" />
+
+                <TextView
+                    android:id="@+id/progressPercentageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bevietnampro_medium"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/percent"
+                    android:textColor="@color/light_grey"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

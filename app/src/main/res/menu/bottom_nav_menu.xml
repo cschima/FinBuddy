@@ -13,11 +13,6 @@
         android:title="@string/title_documents" />
 
     <item
-        android:id="@+id/navigation_meetings"
-        android:icon="@drawable/ic_calendar"
-        android:title="@string/title_meetings" />
-
-    <item
         android:id="@+id/navigation_chat"
         android:icon="@drawable/ic_chat"
         android:title="@string/title_chat" />

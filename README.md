@@ -1,15 +1,17 @@
 # FinGrow
 
 ## What is FinGrow
-FinGrow is a strategic financial consulting app that helps you achieve your goals through zero-fee finaical mentors.
+
+FinGrow is a strategic financial consulting app that helps you achieve your goals
+through **zero-fee** financial mentors.
 
 ### Problem Statement
 
 How might low to middle income post-university young adults receive personalized financial guidance so that they can secure long-term financial stability?
 
-### Reseach Findings
-Young adults need pesonalized finaincial advice to make good long term finaical decicsions. They are often overwelmed and have the misconcpetion that they are below the required finaicial theshold to work with a financial advisor. They need a reliable,
-knowledable finnaical mentor to keep them accountable and guide them in the right direction.
+### Research Findings
+Young adults need personalized financial advice to make good long term financial decisions. They are often overwhelmed and have the misconception that they are below the required financial threshold to work with a financial advisor. They need a reliable,
+knowledgeable financial mentor to keep them accountable and guide them in the right direction.
 
 ### Our Solution
 
@@ -41,13 +43,13 @@ A pro-bono financial consulting app that matches users based on their personaliz
 
 ### Research
 - User Research was conducted through surveys and interviews.
-- We recommend loading app onto Andriod device for user testing for best results. 
+- We recommend loading app onto Android device for user testing for best results.
 
 
 ### Running App
-- Ensure you have installed all dependancies in build.gradle (Module)
+- Ensure you have installed all dependencies in build.gradle (Module)
 - Create Device or pair physical device
-    - Recommended API 30, Andriod 11
+    - Recommended API 30, Android 11
 - Run ```'app'```
 
 ### Activities
@@ -74,6 +76,7 @@ MIT License: ```LICENSE.txt```
 ## Contact Us
 
 General: fingrowuw@gmail.com</br>
+Website: [fingrow.com](https://fingrow.wixsite.com/fingrow)
 
 ## Contributors:
 

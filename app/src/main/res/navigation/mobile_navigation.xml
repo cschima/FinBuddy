@@ -18,12 +18,6 @@
         tools:layout="@layout/fragment_documents" />
 
     <fragment
-        android:id="@+id/navigation_meetings"
-        android:name="com.example.fingrow.ui.meetings.MeetingsFragment"
-        android:label="@string/title_meetings"
-        tools:layout="@layout/fragment_meetings" />
-
-    <fragment
         android:id="@+id/navigation_chat"
         android:name="com.example.fingrow.ui.chat.ChatFragment"
         android:label="@string/title_chat"

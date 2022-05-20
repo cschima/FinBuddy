@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">FinGrow</string>
     <string name="title_home">Home</string>
     <string name="title_documents">Documents</string>
@@ -23,8 +23,6 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_login">Login</string>
     <string name="title_sign_up">Sign Up</string>
     <string name="title_activity_starting_routing">StartingRoutingActivity</string>
@@ -71,7 +69,8 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="recent_activity">Recent Activity</string>
-    <string name="add_goal">Add goal</string>
+    <string name="add_goal">Add Goal</string>
+    <string name="new_goals_will_appear_here">New goals will appear here!</string>
     <string name="saving_goals">Saving Goals</string>
     <string name="see_all">See all</string>
     <string name="joined_fingrow">Joined FinGrow!</string>
@@ -88,6 +87,14 @@
     <string name="time_1_25">1:25 PM</string>
     <string name="time_2_37">2:37 PM</string>
     <string name="one">1</string>
+    <string name="meeting_button">Meeting Button</string>
+    <string name="online">Online</string>
+    <string name="type_something">Type Something</string>
+    <string name="phone">phone</string>
+    <string name="videocam">videocam</string>
+    <string name="Darren_chat_activity">Darren Chat Activity</string>
+    <string name="Darren_message">Happy to be your mentor! Feel free to ask me anything.</string>
+    <string name="am1030">10:30 am</string>
 
 
     <!-- Documents-->
@@ -102,5 +109,137 @@
     <string name="box">box</string>
     <string name="goal_title">Goal Title</string>
     <string name="goal_amount">Goal Amount</string>
+    <string name="title_activity_new_goal">NewGoalActivity</string>
+    <string name="title_activity_existing_goal">ExistingGoalActivity</string>
+    <string name="what_brings_you_to_fingrow">What brings you to FinGrow?</string>
+    <string name="select_your_financial_priorities_below_so_we_can_help_personalize_your_experience">Select your financial priorities below so we can help personalize your experience!</string>
+    <string name="manage_my_financial_plan_or_budget">Manage my financial plan or budget</string>
+    <string name="track_my_income_and_spending">Track my income and spending</string>
+    <string name="get_advice_on_tax_and_investments">Get advice on tax and investments</string>
+    <string name="save_for_long_short_term_financial_goals">Save for long/short term financial goals</string>
+    <string name="something_else">Something else</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="maybe">Maybe</string>
+    <string name="prefer_not_to_say">Prefer not to say</string>
+    <string name="what_type_of_financial_advice_would_you_be_interested_in">What type of financial advice would you be interested in?</string>
+    <string name="this_would_help_our_algorithms_match_you_with_best_suited_consultants">This would help our algorithms match you with best suited consultants!</string>
+    <string name="crisis_and_recovery">Crisis and recovery</string>
+    <string name="risk_management">Risk management</string>
+    <string name="accounting_advisory">Accounting advisory</string>
+    <string name="tax_advisory">Tax advisory</string>
+    <string name="this_well_help_us_understand_your_unique_financial_situation">This well help us understand your unique financial situation</string>
+    <string name="are_you_dealing_with_any_debt">Are you dealing with any debt?</string>
+    <string name="plus_icon">plus icon</string>
+    <string name="lowercase_regex">[a-z]</string>
+    <string name="uppercase_regex">[A-Z]</string>
+    <string name="number_regex" tools:ignore="TypographyDashes">[0-9]</string>
+    <string name="symbol_regex" tools:ignore="TypographyDashes">[^a-zA-Z0-9]</string>
+    <string name="profile">Profile</string>
+    <string name="user_name">User Name</string>
+    <string name="start_date">Start Date</string>
+    <string name="my_information">My Information</string>
+    <string name="mentors">Mentors</string>
+    <string name="log_out">Log Out</string>
+    <string name="not_sure_yet">Not sure yet</string>
+    <string name="under_5k">Under $5K</string>
+    <string name="over_120k">Over $120K</string>
+    <string name="what_financial_goals_are_you_hoping_to_achieve">What financial goals are you hoping to achieve?</string>
+    <string name="goal_types_help">Short-term goals usually help you buy an item on short notice (ex: new phone, new furniture, etc.)\n\nMid-term goals usually help you pay for an event or special day in the somewhat near future (wedding, graduation, etc.)\n\nLong-term goals usually help you plan for situations in the distant future (retirement, paying for children\'s college, etc.)</string>
+    <string name="short_term">Short-term</string>
+    <string name="mid_term">Mid-term</string>
+    <string name="long_term">Long-term</string>
+    <string name="what_is_your_annual_gross_household_income">What is your annual gross household income?</string>
+    <string name="approximately">Approximately:</string>
+    <string name="_5k_or_less">$5K or less</string>
+    <string name="how_many_people_live_in_your_household">How many people live in your household?</string>
+    <string name="low_or_less">$%1$dK or less</string>
+    <string name="high_or_more">$%1$dK or more</string>
+    <string name="slider_value_string">$%1$dK</string>
+    <string name="num">#</string>
+    <string name="ribbon">ribbon</string>
+    <string name="_0">$0</string>
+    <string name="out_of_0">/$0</string>
+    <string name="this_month">This month</string>
+    <string name="last_month">Last month</string>
+    <string name="overall">Overall</string>
+    <string name="when_do_you_want_to_achieve_this_by">When do you want to\nachieve this by?</string>
+    <string name="i_m_flexible">I\'m Flexible</string>
+    <string name="dollar_sign">$</string>
+    <string name="my_new_goal">My New Goal!</string>
+    <string name="dollar_0">$0</string>
+    <string name="dollar_value">$%1$s</string>
+    <string name="slash_value">/%1$s</string>
+    <string name="value_left">%1$s left!</string>
+    <string name="you_have">"You have "</string>
+    <string name="left">left!</string>
+    <string name="try_to_save">"Try to save "</string>
+    <string name="per">$ per</string>
+    <string name="title">Title</string>
+    <string name="slash">/</string>
+    <string name="percent">%</string>
+    <string name="this_is_a">"This is a "</string>
+    <string name="flexible_deadline">flexible deadline!</string>
+    <string name="dont_forget_to_keep_saving">Don\'t forget to keep saving!</string>
+
+
+    <!--Your advisor matches-->
+    <string name="matches_activity">MatchesActivity</string>
+    <string name="explore">Explore</string>
+    <string name="your_advisor_matches">Your advisor matches</string>
+    <string name="im_interested">Choose \"I\'m interested\"</string>
+    <string name="take_your_time">Take your time getting to know these pro-bono experts and choose who you want to chat with by tapping on \"I\'m interested\" on the next page. The potential mentors will reach out to you via chat. You can skip if you can\'t decide yet and go back to this in</string>
+    <string name="my_profile">My Profile\t</string>
+    <string name="tab">tab.</string>
+    <string name="once_you">Once you\'ve get to know them enough, you\'ll</string>
+    <string name="request">get to request</string>
+    <string name="word_one">\tone\t</string>
+    <string name="of_them_as">of them as your mentor via\t</string>
+
+    <!--Select mentor-->
+    <string name="select_mentor_activity">SelectMentorActivity</string>
+    <string name="Experience">Experience</string>
+    <string name="linkedin">LinkedIn</string>
+    <string name="gmail">gmail</string>
+    <string name="heart_interested">I\'m interested</string>
+    <string name="done">Done</string>
+
+    <!--Shelia Bates-->
+    <string name="senior_advisor">Senior Advisor | Risk Management</string>
+    <string name="ffp_foundation">FFP Foundation | 10 years</string>
+
+    <!--Darren Smith-->
+    <string name="senior_cons">Senior Consultant | Financial Planner</string>
+    <string name="twelve_years">FFP Foundation | 12 years</string>
+
+    <!--Carline Wang-->
+    <string name="carline_wang">Caroline Wang</string>
+    <string name="experienced_advisor">Senior Consultant | Debt Specialist</string>
+    <string name="five_years">FFP Foundation | 5 years</string>
+    <string name="financial_advisor">Financial Advisor</string>
+    <string name="ffp">FFP Foundation</string>
+    <string name="ffp_time">May 2020 - Present . 11 Month</string>
+    <string name="airbnb">Airbnb</string>
+    <string name="airbnb_time">May 2018 - Apr 2020 . 11 Month</string>
+    <string name="google">Google</string>
+    <string name="google_time">June 2017 - Apr 2018 . 10 Month</string>
+    <string name="shield">shield</string>
+    <string name="confirmed">Confirmed!</string>
+    <string name="your_next_steps_should_be_to_notify_your_mentor_so_they_can_assist_you_in_reaching_your_goals">Your next steps should be to notify your mentor so they can assist you in reaching your goals.</string>
+    <string name="title_colon">"Title: "</string>
+    <string name="amount_colon">"Amount: "</string>
+    <string name="end_date_colon">"End Date: "</string>
+    <string name="flexible">Flexible</string>
+    <string name="total_saved">Total Saved</string>
+    <string name="calendar">calendar</string>
+    <string name="withdraw_funds">Withdraw funds</string>
+    <string name="add_funds">Add funds</string>
+    <string name="four_diamonds">four diamonds</string>
+    <string name="end_date">End Date</string>
+    <string name="progress">Progress</string>
+    <string name="based_on_your_current_progress">Based on your current progress, you will achieve this goal if you save $%1$s. Keep up the good work!\n</string>
+    <string name="this_is_a_keep_up">"This is a flexible goal. Don\'t forget to keep saving. Keep up the good work!\n"</string>
+    <string name="active_goals">Active goals</string>
+
 
 </resources>

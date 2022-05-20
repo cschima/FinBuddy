@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarThumbVertical="@color/black_30"
+    tools:context=".ui.onboarding.OnboardingAdviceFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bevietnampro_semibold"
+            android:text="@string/what_type_of_financial_advice_would_you_be_interested_in"
+            android:textAlignment="center"
+            android:textColor="@color/like_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/bevietnampro_regular"
+            android:text="@string/this_would_help_our_algorithms_match_you_with_best_suited_consultants"
+            android:textAlignment="center"
+            android:textColor="@color/dark_grey"
+            android:textSize="12sp" />
+
+        <com.example.fingrow.ui.CustomMaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:singleSelection="false">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/firstOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/crisis_and_recovery"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/secondOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/risk_management"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/thirdOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/accounting_advisory"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fourthOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/tax_advisory"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fifthOption"
+                style="@style/MyMaterialButtonOutlineStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bevietnampro_regular"
+                android:insetTop="10dp"
+                android:insetBottom="10dp"
+                android:padding="14dp"
+                android:text="@string/not_sure_yet"
+                android:textAllCaps="false"
+                android:textColor="@color/like_black"
+                android:textSize="14sp"
+                android:theme="@style/Widget.AppCompat.Button.Borderless"
+                app:rippleColor="@null" />
+        </com.example.fingrow.ui.CustomMaterialButtonToggleGroup>
+    </LinearLayout>
+</ScrollView>

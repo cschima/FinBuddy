@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/app_bg_gradient"
     android:orientation="vertical"
-    android:paddingTop="?attr/actionBarSize"
+    android:fitsSystemWindows="true"
     tools:context=".ui.onboarding.OnboardingActivity">
 
     <RelativeLayout
@@ -16,7 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="?attr/actionBarSize">
 
         <TextView
             android:id="@+id/stepHeading"
@@ -47,7 +48,8 @@
             android:textSize="12sp"
             android:theme="@style/Widget.AppCompat.Button.Borderless"
             app:backgroundTint="@color/transparent"
-            app:rippleColor="@color/medium_grey" />
+            app:rippleColor="@color/medium_grey"
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
     <ProgressBar

@@ -22,11 +22,11 @@ class OnboardingActivity : AppCompatActivity() {
         val onboardingViewModel = ViewModelProvider(this)[OnboardingViewModel::class.java]
 
         val fragments: ArrayList<Fragment> = arrayListOf(
-            FirstOnboardingFragment(),
-            // TODO
-            // SecondOnboardingFragment(),
-            ThirdOnboardingFragment(),
-            FourthOnboardingFragment()
+            OnboardingWhyFingrowFragment(),
+            OnboardingGoalTypesFragment(),
+            OnboardingIncomeFragment(),
+            OnboardingDebtFragment(),
+            OnboardingAdviceFragment()
         )
 
         binding.progress.max = fragments.size
@@ -41,9 +41,10 @@ class OnboardingActivity : AppCompatActivity() {
             )
 
             binding.skipButton.setOnClickListener {
-                // TODO
+                // TODO clear selections
                 if (pos < fragments.size) {
                     swapFrag(fragments[pos])
+                    (fragments[pos - 1] as AbstractOnboardingFragment).clearSelections()
                 }
                 else {
                     // TODO attach info

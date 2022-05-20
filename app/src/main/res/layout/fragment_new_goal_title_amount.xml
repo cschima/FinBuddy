@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.NewGoalTitleAmountFragment"
+    android:background="@drawable/new_goal_bg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/first_new_goal_stage_image"
+        android:contentDescription="@string/box"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goal_title"
+        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/titleEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/off_white"
+        android:textSize="14sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_regular"
+        android:inputType="textAutoComplete"
+        android:textAlignment="center"
+        android:hint="@string/my_new_goal"
+        android:textColorHint="@color/medium_grey"
+        android:autofillHints="@null"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/goal_amount"
+        android:textSize="16sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_semibold"
+        android:layout_marginTop="30dp"/>
+
+    <EditText
+        android:id="@+id/amountEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/off_white"
+        android:textSize="14sp"
+        android:textColor="@color/light_grey"
+        android:fontFamily="@font/bevietnampro_regular"
+        android:textAlignment="center"
+        android:hint="@string/dollar_0"
+        android:textColorHint="@color/medium_grey"
+        android:autofillHints="@null"
+        android:imeActionLabel="Continue"
+        android:imeOptions="actionDone"
+        android:inputType="none"/>
+</LinearLayout>
